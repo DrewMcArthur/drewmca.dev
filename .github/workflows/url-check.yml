@@ -10,19 +10,16 @@ jobs:
     name: Load URLs
     runs-on: ubuntu-latest
     outputs: 
-      matrix: ${{ steps.get_urls.outputs.LINK_DATA }}
+      matrix: ${{ steps.load_urls.outputs.value }}
     steps:
       - uses: actions/checkout@v3
-      - id: read_json
-        run: |
-          content=`cat ./src/data/links.json`
-          content="${content//'%'/'%25'}"
-          content="${content//$'\n'/'%0A'}"
-          content="${content//$'\r'/'%0D'}"
-          json=${{fromJSON($content)}}
-          linkData=json.linkData
-          echo "LINK_DATA=linkData" >> $GITHUB_OUTPUT
-
+      - name: get specified property
+        id: load_urls
+        uses: ActionsTools/read-json-action@main
+        with:
+          file_path: "src/data/links.json"
+          prop_path: "linkData.items.url"
+          
   check:
     name: Check URLs
     runs-on: ubuntu-latest
