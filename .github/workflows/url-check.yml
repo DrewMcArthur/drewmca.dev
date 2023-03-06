@@ -22,7 +22,7 @@ jobs:
           echo "::set-output name=packageJson::$content"
       - id: get_urls
         run: |
-          urls=fromJson(steps.read_json.outputs.packageJson).linkData
+          urls=${{fromJson(steps.read_json.outputs.packageJson).linkData}}
           echo '::set-output \"urls::$urls\"'
 
   check:
