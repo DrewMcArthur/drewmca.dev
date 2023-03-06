@@ -10,7 +10,7 @@ jobs:
     name: Load URLs
     runs-on: ubuntu-latest
     outputs: 
-      matrix: ${{ steps.load_urls.outputs.value }}
+      matrix: ${{ toJson(steps.load_urls.outputs.value) }}
     steps:
       - uses: actions/checkout@v3
       - name: get specified property
