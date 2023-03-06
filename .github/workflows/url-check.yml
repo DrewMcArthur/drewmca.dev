@@ -23,7 +23,7 @@ jobs:
       - id: get_urls
         run: |
           urls=${{fromJson(steps.read_json.outputs.packageJson).linkData}}
-          echo '::set-output \"urls::$urls\"'
+          echo '::set-output name=urls::$urls'
 
   check:
     name: Check URLs
