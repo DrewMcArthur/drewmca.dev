@@ -18,7 +18,7 @@ jobs:
         uses: ActionsTools/read-json-action@main
         with:
           file_path: "src/data/links.json"
-          prop_path: "linkData.items.url"
+          prop_path: "linkData"
           
   check:
     name: Check URLs
