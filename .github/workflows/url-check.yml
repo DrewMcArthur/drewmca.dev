@@ -19,7 +19,7 @@ jobs:
           content="${content//'%'/'%25'}"
           content="${content//$'\n'/'%0A'}"
           content="${content//$'\r'/'%0D'}"
-          json=${{fromJSON(content)}}
+          json=${{fromJSON($content)}}
           linkData=json.linkData
           echo "LINK_DATA=linkData" >> $GITHUB_OUTPUT
 
