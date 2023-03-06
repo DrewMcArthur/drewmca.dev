@@ -19,11 +19,11 @@ jobs:
           content="${content//'%'/'%25'}"
           content="${content//$'\n'/'%0A'}"
           content="${content//$'\r'/'%0D'}"
-          echo "::set-output name=packageJson::$content"
+          echo "LINK_DATA=$content" >> $GITHUB_OUTPUT
       - id: get_urls
         run: |
-          urls=${{fromJson(steps.read_json.outputs.packageJson).linkData}}
-          echo '::set-output name=urls::$urls'
+          urls=${{fromJson(steps.read_json.outputs.LINK_DATA).linkData}}
+          echo 'URLS=$urls' >> $GITHUB_OUTPUT
 
   check:
     name: Check URLs
