@@ -23,7 +23,7 @@ jobs:
       - id: get_urls
         run: |
           urls=${{fromJson(steps.read_json.outputs.LINK_DATA).linkData}}
-          echo 'URLS=$urls' >> $GITHUB_OUTPUT
+          echo "URLS=$urls" >> $GITHUB_OUTPUT
 
   check:
     name: Check URLs
