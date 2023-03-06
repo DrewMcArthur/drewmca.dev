@@ -12,6 +12,7 @@ jobs:
     outputs: 
       matrix: ${{ steps.get_urls.outputs.urls }}
     steps:
+      - uses: actions/checkout@v3
       - id: read_json
         run: |
           content=`cat ./src/data/links.json`
