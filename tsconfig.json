@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
-    "jsx": "react",
-    "jsxImportSource": "preact"
+    "verbatimModuleSyntax": false
   },
   "extends": "astro/tsconfigs/strict"
 }

@@ -10,11 +10,16 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/image": "^0.15.1",
     "@astrojs/preact": "^2.0.3",
     "@astrojs/react": "^2.0.2",
+    "@icons-pack/react-simple-icons": "^6.3.0",
+    "@mdi/js": "^7.1.96",
+    "@mdi/react": "^1.6.1",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "astro": "^2.0.17",
+    "intersection-observer": "^0.12.2",
     "preact": "^10.13.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
