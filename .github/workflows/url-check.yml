@@ -10,7 +10,7 @@ jobs:
     name: Load URLs
     runs-on: ubuntu-latest
     outputs: 
-      matrix: ${{ toJson(steps.load_urls.outputs.value) }}
+      matrix: ${{ steps.json.outputs.value }}
     steps:
       - uses: actions/checkout@v3
       - name: get specified property
@@ -19,6 +19,9 @@ jobs:
         with:
           file_path: "src/data/links.json"
           prop_path: "linkData"
+      - id: json
+        run: |
+          echo "linkData=toJson(steps.load_urls.outputs.value)" >> $GITHUB_OUTPUT
           
   check:
     name: Check URLs
@@ -26,7 +29,7 @@ jobs:
     needs: [get_urls]
     strategy:
       matrix:
-        value: ${{ needs.get_urls.outputs.matrix }}
+        value: ${{ fromJson(needs.get_urls.outputs.matrix) }}
     steps:
       - name: URL Health Check
         uses: Jtalk/url-health-check-action@v3.1
