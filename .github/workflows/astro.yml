@@ -28,6 +28,15 @@ env:
   # BUILD_PATH: subfolder
 
 jobs:
+  check:
+    name: Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Astro Check
+        run: |
+          npm run check
   build:
     name: Build
     runs-on: ubuntu-latest
