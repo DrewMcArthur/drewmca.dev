@@ -1,0 +1,13 @@
+---
+import SocialLink from "./SocialLink.astro";
+import { 
+  mdiTwitter, mdiMastodon, mdiInstagram, 
+  mdiGithub, mdiGitlab, mdiLinkedin,
+  mdiEmailOutline
+} from '@mdi/js';
+import links from '../data/links.json';
+---
+<div class='social-links'>
+  {links.linkData.map(linkData => 
+    <SocialLink data={linkData} />)}
+</div>

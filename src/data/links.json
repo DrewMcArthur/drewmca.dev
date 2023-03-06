@@ -1,0 +1,45 @@
+{
+  "linkData": [
+    {
+      "type": "twitter",
+      "text": "@drewdiezel",
+      "url": "https://twitter.com/drewdiezel"
+    },
+    {
+      "type": "instagram",
+      "text": "@drewdiezel",
+      "url": "https://instagram.com/drewdiezel"
+    },
+    {
+      "type": "telegram",
+      "text": "@drewmcarthur",
+      "url": "https://t.me/drewmcarthur"
+    },
+    {
+      "type": "mastodon", 
+      "text": "@drewmca@social.coop",
+      "url": "https://social.coop/drewmca"
+    },
+    {
+      "type": "github",
+      "text": "@drewmcarthur",
+      "url": "https://github.com/drewmcarthur"
+    },
+    {
+      "type": "gitlab",
+      "text": "@drewmcarthur",
+      "url": "https://gitlab.com/drewmcarthur"
+    },
+    {
+      "type": "linkedin",
+      "text": "@drewmcarthur",
+      "url": "https://linkedin.com/drewmcarthur"
+    },
+    {
+      "type": "gmail",
+      "text": "drew@mcarthur.in",
+      "url": "mailto:drew@mcarthur.in"
+    }
+  ]
+}
+
