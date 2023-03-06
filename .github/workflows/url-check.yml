@@ -10,7 +10,7 @@ jobs:
     name: Load URLs
     runs-on: ubuntu-latest
     outputs: 
-      matrix: ${{ steps.get_urls.outputs.urls }}
+      matrix: ${{ steps.get_urls.outputs.LINK_DATA }}
     steps:
       - uses: actions/checkout@v3
       - id: read_json
@@ -19,11 +19,9 @@ jobs:
           content="${content//'%'/'%25'}"
           content="${content//$'\n'/'%0A'}"
           content="${content//$'\r'/'%0D'}"
-          echo "LINK_DATA=$content" >> $GITHUB_OUTPUT
-      - id: get_urls
-        run: |
-          urls=${{fromJson(steps.read_json.outputs.LINK_DATA).linkData}}
-          echo "URLS=$urls" >> $GITHUB_OUTPUT
+          json=${{fromJSON(content)}}
+          linkData=json.linkData
+          echo "LINK_DATA=linkData" >> $GITHUB_OUTPUT
 
   check:
     name: Check URLs
