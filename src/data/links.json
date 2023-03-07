@@ -1,6 +1,10 @@
 {
   "linkData": [
     {
+      "type": "planet",
+      "text": "hi, i'm drew!"
+    },
+    {
       "type": "gmail",
       "text": "hi@drewmca.dev",
       "url": "mailto:hi@drewmca.dev"

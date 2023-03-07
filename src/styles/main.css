@@ -1,0 +1,123 @@
+:root {
+  --background-color: antiquewhite;
+
+  --main-color: #394f4f;
+  --light-color: #6b7d7d;
+
+  --main-color--hover: #1b3333;
+
+  /* to calculate, put the above hex into https://codepen.io/sosuke/pen/Pjoqqp */
+  --background-color-filter: invert(100%) sepia(86%) saturate(795%) hue-rotate(299deg) brightness(107%) contrast(96%);
+
+  --main-color-filter: invert(27%) sepia(15%) saturate(626%) hue-rotate(131deg) brightness(96%) contrast(91%);
+
+  --main-color-filter--hover: invert(15%) sepia(8%) saturate(2382%) hue-rotate(131deg) brightness(93%) contrast(89%);
+
+  /** animation timing **/
+  --flyin-timing: cubic-bezier(0,1,0,1);
+}
+
+body {
+  display: flex;
+  align-content: center;
+
+  background-color: var(--background-color);
+  color: var(--main-color);
+}
+
+.main {
+  font-family:'Lato','Ubuntu',system-ui,sans-serif;
+  font-weight:300;
+  font-size: 34px;
+  line-height: 1.6em;
+  display: flex;
+  flex-direction: column;
+  margin: 1em auto;
+  align-items: flex-start;
+}
+
+/* headline */
+.planet.social-link {
+  cursor: auto;
+  border: none;
+  /* animation: flyintop 1s var(--flyin-timing); */
+}
+
+.planet.social-link .social-text {
+  font-size: 1.67em;
+  color: var(--main-color--hover);
+}
+
+.planet.social-link .social-icon, 
+.planet.social-link:hover .social-icon {
+  opacity: 0;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-link {
+  color: var(--light-color);
+  cursor: pointer;
+  text-decoration: none;
+  border-top: 1px solid var(--main-color);
+  padding: 1px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: .6em;
+  transition: color .25s;
+}
+
+.social-icon {
+  margin: 5px;
+  filter: var(--main-color-filter);
+}
+
+.social-text {
+  margin: 5px;
+}
+
+.social-link:not(.planet):hover {
+  color: var(--main-color--hover);
+  border-color: var(--main-color--hover);
+}
+
+.social-link:hover .social-icon {
+  filter: var(--main-color-filter--hover);
+}
+
+.social-link:not(.planet) .social-icon {
+  animation: flyinleft 0.25s var(--flyin-timing);
+}
+
+.social-link .social-text {
+  animation: flyinright 0.25s var(--flyin-timing);
+}
+
+/* idea for fade in taken from https://malone.io */
+/* used for .main on load */
+@keyframes flyinright {
+  from {
+    opacity: 0;
+    transform: translateX(25em);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes flyinleft {
+  from {
+    opacity: 0;
+    transform: translateX(-25em);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
