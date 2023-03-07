@@ -10,6 +10,7 @@
   --main-color-filter: invert(27%) sepia(15%) saturate(626%) hue-rotate(131deg) brightness(96%) contrast(91%);
 
   --main-color-filter--hover: invert(0%) sepia(7%) saturate(29%) hue-rotate(274deg) brightness(104%) contrast(108%);
+
 }
 
 body {
@@ -29,11 +30,14 @@ body {
   flex-direction: column;
   margin: 1em auto;
   align-items: flex-start;
+
 }
 
 /* headline */
 .planet.social-link {
   cursor: auto;
+  border: none;
+  /* animation: flyintop 1s var(--flyin-timing); */
 }
 
 .planet.social-link .social-text {
@@ -55,7 +59,7 @@ body {
   color: var(--light-color);
   cursor: pointer;
   text-decoration: none;
-  border-bottom: 1px solid var(--main-color);
+  border-top: 1px solid var(--main-color);
   padding: 1px 0;
   display: flex;
   align-items: center;
@@ -66,11 +70,12 @@ body {
 
 .social-icon {
   margin: 5px;
-  filter: var(--main-color-filter)
+  filter: var(--main-color-filter);
 }
 
 .social-text {
   margin: 5px;
+  animation: flyinright 0.25s var(--flyin-timing);
 }
 
 .social-link:not(.planet):hover {

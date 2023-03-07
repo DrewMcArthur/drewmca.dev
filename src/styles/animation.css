@@ -1,0 +1,36 @@
+:root {
+  --flyin-timing: cubic-bezier(0,1,0,1);
+}
+
+.social-icon {
+  animation: flyinleft 0.25s var(--flyin-timing);
+}
+
+.social-text {
+  animation: flyinright 0.25s var(--flyin-timing);
+}
+
+/* idea for fade in taken from https://malone.io */
+/* used for .main on load */
+@keyframes flyinright {
+  from {
+    opacity: 0;
+    transform: translateX(25em);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes flyinleft {
+  from {
+    opacity: 0;
+    transform: translateX(-25em);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
