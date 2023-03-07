@@ -4,7 +4,7 @@ import SimpleIcon from "./SimpleIcon.astro";
 const {data} = Astro.props;
 ---
 <a 
-  class='social-link' 
+  class={`social-link ${data.type}`} 
   href={data.url} 
   target="_blank" 
   rel='noopener noreferrer'
