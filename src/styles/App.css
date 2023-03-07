@@ -1,6 +1,20 @@
+:root {
+  --main-color: #394f4f;
+  --main-color--hover: #000;
+  --light-color: #6b7d7d;
+
+  /* to calculate, put the above hex into https://codepen.io/sosuke/pen/Pjoqqp */
+  --main-color-filter: invert(27%) sepia(15%) saturate(626%) hue-rotate(131deg) brightness(96%) contrast(91%);
+
+  --main-color-filter--hover: invert(0%) sepia(7%) saturate(29%) hue-rotate(274deg) brightness(104%) contrast(108%);
+}
+
 body {
   display: flex;
   align-content: center;
+
+  background-color: antiquewhite;
+  color: var(--main-color);
 }
 
 .main {
@@ -10,9 +24,13 @@ body {
   line-height: 1.6em;
   display: flex;
   flex-direction: column;
-  margin: auto;
-  margin-top: 1em;
+  margin: 1em auto;
   align-items: flex-start;
+}
+
+.headline {
+  display:flex;
+  align-self: end;
 }
 
 .social-links {
@@ -21,18 +39,32 @@ body {
 }
 
 .social-link {
-  color: black;
+  color: var(--light-color);
   cursor: pointer;
   text-decoration: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--main-color);
+  padding-bottom: 1px;
+  margin-bottom: 1px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-size: .6em;
+  transition: .25s;
 }
 
 .social-icon {
   margin: 0.25em;
+  filter: var(--main-color-filter)
 }
+
 .social-text {
   margin: 0.25em;
+}
+
+.social-link:hover {
+  color: var(--main-color--hover);
+  border-bottom: 3px solid var(--main-color--hover);
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  filter: var(--main-color-filter--hover);
 }
