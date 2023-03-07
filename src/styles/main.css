@@ -50,7 +50,7 @@ body {
 
 .planet.social-link .social-icon, 
 .planet.social-link:hover .social-icon {
-  filter: var(--background-color-filter);
+  opacity: 0;
 }
 
 .social-links {
@@ -89,11 +89,11 @@ body {
   filter: var(--main-color-filter--hover);
 }
 
-.social-icon {
+.social-link:not(.planet) .social-icon {
   animation: flyinleft 0.25s var(--flyin-timing);
 }
 
-.social-text {
+.social-link .social-text {
   animation: flyinright 0.25s var(--flyin-timing);
 }
 
