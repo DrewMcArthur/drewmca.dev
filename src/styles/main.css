@@ -1,15 +1,17 @@
 :root {
+  --background-color: antiquewhite;
+
   --main-color: #394f4f;
-  --main-color--hover: #000;
   --light-color: #6b7d7d;
 
-  --background-color: antiquewhite;
-  --background-color-filter: invert(100%) sepia(86%) saturate(795%) hue-rotate(299deg) brightness(107%) contrast(96%);
+  --main-color--hover: #1b3333;
 
   /* to calculate, put the above hex into https://codepen.io/sosuke/pen/Pjoqqp */
+  --background-color-filter: invert(100%) sepia(86%) saturate(795%) hue-rotate(299deg) brightness(107%) contrast(96%);
+
   --main-color-filter: invert(27%) sepia(15%) saturate(626%) hue-rotate(131deg) brightness(96%) contrast(91%);
 
-  --main-color-filter--hover: invert(0%) sepia(7%) saturate(29%) hue-rotate(274deg) brightness(104%) contrast(108%);
+  --main-color-filter--hover: invert(15%) sepia(8%) saturate(2382%) hue-rotate(131deg) brightness(93%) contrast(89%);
 
 }
 
