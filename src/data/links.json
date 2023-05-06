@@ -35,7 +35,13 @@
       "url": "https://t.me/drewmcarthur"
     },
     {
-      "type": "mastodon", 
+      "type": "bluesky",
+      "text": "@drewmca.dev",
+      "url": "https://staging.bsky.app/profile/drewmca.dev",
+      "iconUrl": "/icons/bsky.png"
+    },
+    {
+      "type": "mastodon",
       "text": "@drewmca@social.coop",
       "url": "https://social.coop/@drewmca"
     },
@@ -51,4 +57,3 @@
     }
   ]
 }
-

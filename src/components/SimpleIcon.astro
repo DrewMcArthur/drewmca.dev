@@ -1,9 +1,7 @@
 ---
-const {name} = Astro.props;
+const { name, iconUrl } = Astro.props;
+const url =
+  iconUrl ?? `https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/${name}.svg`;
 ---
-<img 
-  class='social-icon'  
-  height="32" 
-  width="32" 
-  src={`https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/${name}.svg`}
-  />
+
+<img class="social-icon" height="32" width="32" src={url} />
