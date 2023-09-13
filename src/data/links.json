@@ -1,10 +1,6 @@
 {
   "linkData": [
     {
-      "type": "planet",
-      "text": "hi, i'm drew!"
-    },
-    {
       "type": "gmail",
       "text": "hi@drewmca.dev",
       "url": "mailto:hi@drewmca.dev"
@@ -35,7 +31,7 @@
       "url": "https://t.me/drewmcarthur"
     },
     {
-      "type": "mastodon", 
+      "type": "mastodon",
       "text": "@drewmca@social.coop",
       "url": "https://social.coop/@drewmca"
     },
@@ -51,4 +47,3 @@
     }
   ]
 }
-
