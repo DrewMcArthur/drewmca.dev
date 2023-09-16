@@ -1,0 +1,41 @@
+:root {
+    --background-color: antiquewhite;
+    --main-color: #394f4f;
+    --light-color: #6b7d7d;
+}
+
+#can-scroll-indicator {
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+
+    transform: translateX(-50%);
+    background: linear-gradient(to top, var(--background-color) 50%, transparent);
+
+    height: 3em;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* cursor: pointer; */
+}
+
+#arrow-left,
+#arrow-right {
+    width: 2em;
+    height: 0;
+    margin: 0 -.2em;
+    border: 3px solid var(--light-color);
+    border-radius: 5px;
+    position: relative;
+}
+
+#arrow-left {
+    transform: rotate(20deg);
+}
+
+#arrow-right {
+    transform: rotate(-20deg);
+}
