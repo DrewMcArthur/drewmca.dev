@@ -44,6 +44,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: start;
+  padding-bottom: .3em;
 }
 
 #app {
