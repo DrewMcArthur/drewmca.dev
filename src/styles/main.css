@@ -44,7 +44,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: start;
-  padding-bottom: .3em;
 }
 
 #app {
@@ -55,7 +54,14 @@ body {
   padding-right: 5%;
 }
 
-#app>div {
+#top-fade {
+  height: 1em;
+  background: linear-gradient(to bottom, var(--background-color) 50%, transparent);
+  position: sticky;
+  top: 0;
+}
+
+#app>.snappable {
   scroll-snap-align: start end;
   scroll-margin-top: 1em;
   scroll-margin-bottom: 10em;
