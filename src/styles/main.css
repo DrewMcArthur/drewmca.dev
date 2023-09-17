@@ -14,7 +14,7 @@
   --main-color-filter--hover: invert(15%) sepia(8%) saturate(2382%) hue-rotate(131deg) brightness(93%) contrast(89%);
 
   /** animation timing **/
-  --flyin-timing: cubic-bezier(0,1,0,1);
+  --flyin-timing: cubic-bezier(0, 1, 0, 1);
 }
 
 body {
@@ -23,17 +23,55 @@ body {
 
   background-color: var(--background-color);
   color: var(--main-color);
-}
-
-.main {
-  font-family:'Lato','Ubuntu',system-ui,sans-serif;
-  font-weight:300;
-  font-size: 34px;
+  font-family: 'Lato', 'Ubuntu', system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 120%;
   line-height: 1.6em;
   display: flex;
   flex-direction: column;
-  margin: 1em auto;
   align-items: flex-start;
+
+  margin: auto;
+  padding: 1.5em;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.header {
+  font-size: 2em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  padding-bottom: .2em;
+  background-color: var(--background-color)
+}
+
+#app {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-snap-stop: always;
+  scroll-behavior: smooth;
+  transition: scroll-behavior 0.1s ease-out;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+#top-fade {
+  height: 2em;
+  background: linear-gradient(var(--background-color) 20%, transparent 80%);
+  position: sticky;
+  top: -1px;
+  z-index: 999;
+}
+
+#app>.snappable {
+  scroll-snap-align: start end;
+  scroll-margin-top: 1em;
+  scroll-margin-bottom: 10em;
+  margin-bottom: 75vh;
 }
 
 /* headline */
@@ -48,7 +86,7 @@ body {
   color: var(--main-color--hover);
 }
 
-.planet.social-link .social-icon, 
+.planet.social-link .social-icon,
 .planet.social-link:hover .social-icon {
   opacity: 0;
 }
@@ -67,8 +105,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  font-size: .6em;
+  font-size: .9em;
   transition: color .25s;
+}
+
+.social-link:first-child {
+  border: none;
 }
 
 .social-icon {
@@ -97,6 +139,16 @@ body {
   animation: flyinright 0.25s var(--flyin-timing);
 }
 
+.social-link .social-name {
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+
+.social-link:hover .social-name {
+  opacity: 1;
+  color: var(--light-color)
+}
+
 /* idea for fade in taken from https://malone.io */
 /* used for .main on load */
 @keyframes flyinright {
@@ -116,6 +168,7 @@ body {
     opacity: 0;
     transform: translateX(-25em);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);

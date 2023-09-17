@@ -1,8 +1,8 @@
 ---
 import SocialLink from "./SocialLink.astro";
-import links from '../data/links.json';
+import links from "../data/links.json";
 ---
-<div class='social-links'>
-  {links.linkData.map(linkData => 
-    <SocialLink data={linkData} />)}
+
+<div id="links" class="social-links snappable">
+  {links.linkData.map((linkData) => <SocialLink data={linkData} />)}
 </div>

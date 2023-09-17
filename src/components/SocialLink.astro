@@ -1,14 +1,24 @@
 ---
 import SimpleIcon from "./SimpleIcon.astro";
 
-const {data} = Astro.props;
+const { data } = Astro.props;
 ---
-<a 
-  class={`social-link ${data.type}`} 
-  href={data.url} 
-  target="_blank" 
-  rel='noopener noreferrer'
-  >
+
+<a
+  class={`social-link ${data.type}`}
+  href={data.url}
+  target="_blank"
+  rel="noopener noreferrer"
+>
   <SimpleIcon name={data.type} />
-  <span class='social-text'>{data.text}</span>
+  {
+    data.type !== "gmail" ? (
+      <>
+        <span class="social-text">{data.type}</span>
+        <span class="social-name">{data.text}</span>
+      </>
+    ) : (
+      <span class="social-text">{data.text}</span>
+    )
+  }
 </a>
