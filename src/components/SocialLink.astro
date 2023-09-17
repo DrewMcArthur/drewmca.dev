@@ -11,5 +11,6 @@ const { data } = Astro.props;
   rel="noopener noreferrer"
 >
   <SimpleIcon name={data.type} />
-  <span class="social-text">{data.text}</span>
+  <span class="social-text">{data.type}</span>
+  <span class="social-name">{data.text}</span>
 </a>

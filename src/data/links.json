@@ -36,14 +36,14 @@
       "url": "https://discordapp.com/users/brew#8567"
     },
     {
-      "type": "twitter",
-      "text": "@drewdiezel",
-      "url": "https://twitter.com/drewdiezel"
-    },
-    {
       "type": "instagram",
       "text": "@drewdiezel",
       "url": "https://instagram.com/drewdiezel"
+    },
+    {
+      "type": "twitter",
+      "text": "@drewdiezel",
+      "url": "https://twitter.com/drewdiezel"
     }
   ]
 }
