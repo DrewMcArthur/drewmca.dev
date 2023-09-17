@@ -21,11 +21,6 @@
       "url": "https://linkedin.com/in/drewmcarthur"
     },
     {
-      "type": "discord",
-      "text": "brew#8567",
-      "url": "https://discordapp.com/users/brew#8567"
-    },
-    {
       "type": "telegram",
       "text": "@drewmcarthur",
       "url": "https://t.me/drewmcarthur"
@@ -34,6 +29,11 @@
       "type": "mastodon",
       "text": "@drewmca@social.coop",
       "url": "https://social.coop/@drewmca"
+    },
+    {
+      "type": "discord",
+      "text": "@drewdiezel",
+      "url": "https://discordapp.com/users/brew#8567"
     },
     {
       "type": "twitter",
