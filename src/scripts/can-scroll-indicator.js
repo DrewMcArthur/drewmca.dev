@@ -1,8 +1,19 @@
 window.addEventListener("load", () => {
   const app = document.querySelector("#app");
 
-  function scrollToLinks() {
-    document.querySelector("#links").scrollIntoView({ behavior: "smooth" });
+  function scrollToEl(selector) {
+    const app = document.querySelector("#app");
+    const el = document.querySelector(selector);
+
+    const elRect = el.getBoundingClientRect();
+    const appRect = app.getBoundingClientRect();
+
+    const offsetTop = elRect.top - appRect.top;
+
+    app.scrollTo({
+      top: offsetTop,
+      behavior: "smooth",
+    });
   }
 
   function scrollToAbout() {
@@ -16,15 +27,15 @@ window.addEventListener("load", () => {
   function flipScrollIndicator() {
     getScrollIndicator().classList.add("flipped");
     const btn = getScrollIndicator();
-    btn.removeEventListener("click", scrollToLinks);
-    btn.addEventListener("click", scrollToAbout);
+    btn.removeEventListener("click", () => scrollToEl("#links"));
+    btn.addEventListener("click", () => scrollToEl("#about"));
   }
 
   function unflipScrollIndicator() {
     getScrollIndicator().classList.remove("flipped");
     const btn = getScrollIndicator();
-    btn.removeEventListener("click", scrollToAbout);
-    btn.addEventListener("click", scrollToLinks);
+    btn.removeEventListener("click", () => scrollToEl("#about"));
+    btn.addEventListener("click", () => scrollToEl("#links"));
   }
 
   function manageScrollIndicator() {

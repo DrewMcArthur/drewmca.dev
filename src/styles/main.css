@@ -52,6 +52,8 @@ body {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-snap-stop: always;
+  scroll-behavior: smooth;
+  transition: scroll-behavior 0.1s ease-out;
   height: 100%;
   width: 100%;
   margin: auto;
