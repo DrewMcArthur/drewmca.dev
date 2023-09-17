@@ -28,7 +28,6 @@ window.addEventListener("load", () => {
   }
 
   function manageScrollIndicator() {
-    console.log(app.scrollTop);
     if (app.scrollTop > 400) {
       flipScrollIndicator();
     } else {
