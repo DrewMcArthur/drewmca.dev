@@ -2,22 +2,15 @@ window.addEventListener("load", () => {
   const app = document.querySelector("#app");
 
   function scrollToEl(selector) {
-    const app = document.querySelector("#app");
     const el = document.querySelector(selector);
-
     const elRect = el.getBoundingClientRect();
     const appRect = app.getBoundingClientRect();
-
     const offsetTop = elRect.top - appRect.top;
 
     app.scrollTo({
       top: offsetTop,
       behavior: "smooth",
     });
-  }
-
-  function scrollToAbout() {
-    document.querySelector("#about").scrollIntoView({ behavior: "smooth" });
   }
 
   function getScrollIndicator() {
