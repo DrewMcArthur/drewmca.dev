@@ -31,6 +31,16 @@
       "url": "https://instagram.com/drewdiezel"
     },
     {
+      "type": "threads",
+      "text": "@drewdiezel",
+      "url": "https://www.threads.net/@drewdiezel"
+    },
+    {
+      "type": "bsky",
+      "text": "@drewmca.dev",
+      "url": "https://bsky.app/profile/drewmca.dev"
+    },
+    {
       "type": "mastodon",
       "text": "@drewmca@social.coop",
       "url": "https://social.coop/@drewmca"
