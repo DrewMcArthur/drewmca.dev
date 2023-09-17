@@ -30,12 +30,15 @@
     border: 3px solid var(--light-color);
     border-radius: 5px;
     position: relative;
+    transition: transform .1s ease-out;
 }
 
+.flipped>#arrow-right,
 #arrow-left {
     transform: rotate(20deg);
 }
 
+.flipped>#arrow-left,
 #arrow-right {
     transform: rotate(-20deg);
 }

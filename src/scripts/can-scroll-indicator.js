@@ -1,28 +1,41 @@
 window.addEventListener("load", () => {
+  const app = document.querySelector("#app");
+
   function scrollToLinks() {
     document.querySelector("#links").scrollIntoView({ behavior: "smooth" });
   }
 
-  function hideScrollIndicator() {
-    document.querySelector("#can-scroll-indicator").style.display = "none";
+  function scrollToAbout() {
+    document.querySelector("#about").scrollIntoView({ behavior: "smooth" });
   }
 
-  function showScrollIndicator() {
-    document.querySelector("#can-scroll-indicator").style.display = "flex";
+  function getScrollIndicator() {
+    return document.querySelector("#can-scroll-indicator");
+  }
+
+  function flipScrollIndicator() {
+    getScrollIndicator().classList.add("flipped");
+    const btn = getScrollIndicator();
+    btn.removeEventListener("click", scrollToLinks);
+    btn.addEventListener("click", scrollToAbout);
+  }
+
+  function unflipScrollIndicator() {
+    getScrollIndicator().classList.remove("flipped");
+    const btn = getScrollIndicator();
+    btn.removeEventListener("click", scrollToAbout);
+    btn.addEventListener("click", scrollToLinks);
   }
 
   function manageScrollIndicator() {
-    console.log("scrolled!" + window.scroll);
-    if (window.scrollY > 20) {
-      hideScrollIndicator();
+    console.log(app.scrollTop);
+    if (app.scrollTop > 400) {
+      flipScrollIndicator();
     } else {
-      showScrollIndicator();
+      unflipScrollIndicator();
     }
   }
 
-  const app = document.querySelector("#app");
   app.addEventListener("scroll", manageScrollIndicator);
-  document
-    .querySelector("#can-scroll-indicator")
-    .addEventListener("click", scrollToLinks);
+  manageScrollIndicator();
 });
