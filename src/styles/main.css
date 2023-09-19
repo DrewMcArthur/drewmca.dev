@@ -46,7 +46,7 @@ body {
   background-color: var(--background-color);
   width: 100%;
   margin-top: 3.75vh;
-  padding: 0 3.75vw 0.4em 3.75vw;
+  padding: 0 3.75vw 0.5em 3.75vw;
 }
 
 #app {
