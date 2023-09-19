@@ -147,6 +147,16 @@ a {
   transition: color 1s ease-out;
 }
 
+.social-link .social-name {
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+
+.social-link:hover {
+  color: var(--main-color--hover);
+  border-color: var(--main-color--hover);
+}
+
 .social-link:hover .social-icon {
   filter: var(--main-color-filter--hover);
 }
@@ -154,11 +164,6 @@ a {
 .social-link:hover .social-text {
   text-decoration: underline;
   color: var(--main-color);
-}
-
-.social-link .social-name {
-  opacity: 0;
-  transition: opacity .25s ease;
 }
 
 .social-link:hover .social-name {
