@@ -19,7 +19,7 @@
 
 body {
   display: flex;
-  align-content: center;
+  flex-direction: column;
 
   background-color: var(--background-color);
   color: var(--main-color);
@@ -27,16 +27,14 @@ body {
   font-weight: 300;
   font-size: 120%;
   line-height: 1.6em;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 
+  max-width: 40em;
   margin: auto;
-  padding: 1.5em;
-  max-width: 500px;
-  max-height: 90vh;
-  overflow: hidden;
+  padding: 5vh 5vw;
+  height: 90vh;
+  overflow-y: hidden;
 }
+
 
 .header {
   font-size: 2em;
@@ -44,58 +42,54 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: start;
+  margin-top: 3.75vh;
   padding-bottom: .2em;
   background-color: var(--background-color)
 }
 
 #app {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  scroll-snap-type: y mandatory;
-  scroll-snap-stop: always;
-  scroll-behavior: smooth;
-  transition: scroll-behavior 0.1s ease-out;
-  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 90vh;
+  overflow-y: hidden;
+  position: relative;
+}
+
+#app:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image: linear-gradient(var(--background-color) 0%, transparent 5%, transparent 90%, var(--background-color) 100%);
   width: 100%;
-  margin: auto;
-  padding-right: 2%;
+  height: 100%;
 }
 
-#top-fade {
-  height: 2em;
-  background: linear-gradient(var(--background-color) 20%, transparent 80%);
-  position: sticky;
-  top: -1px;
-  z-index: 999;
+.section {
+  min-width: 10em;
+  max-width: 20em;
+  overflow-y: scroll;
 }
 
-#app>.section {
-  scroll-snap-align: start end;
-  scroll-margin-top: 1em;
-  scroll-margin-bottom: 10em;
-  margin-bottom: 75vh;
+.section>*:last-child {
+  margin-bottom: 5vh;
 }
 
-/* headline */
-.planet.social-link {
-  cursor: auto;
-  border: none;
-  /* animation: flyintop 1s var(--flyin-timing); */
+.header,
+.section {
+  padding: 0 3.75vw;
 }
 
-.planet.social-link .social-text {
-  font-size: 1.67em;
-  color: var(--main-color--hover);
-}
-
-.planet.social-link .social-icon,
-.planet.social-link:hover .social-icon {
-  opacity: 0;
+#about>p {
+  margin-top: 0.5em;
 }
 
 .social-links {
   display: flex;
   flex-direction: column;
+  margin-top: 0.25em;
 }
 
 .social-link {
@@ -133,14 +127,6 @@ body {
   filter: var(--main-color-filter--hover);
 }
 
-.social-link:not(.planet) .social-icon {
-  animation: flyinleft 0.25s var(--flyin-timing);
-}
-
-.social-link .social-text {
-  animation: flyinright 0.25s var(--flyin-timing);
-}
-
 .social-link .social-name {
   opacity: 0;
   transition: opacity .25s ease;
@@ -174,5 +160,21 @@ body {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #app {
+    scroll-snap-type: x mandatory;
+  }
+
+  #app::after {
+    width: 200%;
+  }
+
+  .section {
+    min-width: 85vw;
+    scroll-snap-align: start;
+    scroll-behavior: smooth;
   }
 }
