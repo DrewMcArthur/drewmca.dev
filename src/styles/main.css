@@ -177,7 +177,7 @@ body {
 
   #app {
     scroll-snap-type: x mandatory;
-    height: calc(83.5vh - env(safe-area-inset-bottom) - env(safe-area-inset-top));
+    height: calc(73.5vh - env(safe-area-inset-bottom) - env(safe-area-inset-top));
   }
 
   #app::after {
