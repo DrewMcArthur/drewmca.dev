@@ -7,7 +7,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const app = document.querySelector('#app')!;
-        const sections = document.querySelectorAll('#app > div');
+        const sections: NodeListOf<HTMLElement> = document.querySelectorAll('#app > div');
         const navLinks = document.querySelectorAll('.section-header');
         
         app.addEventListener('scroll', () => {
