@@ -187,5 +187,6 @@ body {
     min-width: 85vw;
     scroll-snap-align: start;
     scroll-behavior: smooth;
+    scroll-margin-left: -1.1125vw;
   }
 }
