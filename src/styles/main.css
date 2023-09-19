@@ -36,6 +36,9 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  color: var(--main-color);
+}
 
 .header {
   display: flex;
@@ -87,9 +90,10 @@ body {
   transition: text-decoration .1s ease-out, color .1s ease-out;
 }
 
+.section-header:hover,
 .section-header.active {
   text-decoration: underline;
-  color: var(--main-color)
+  color: var(--main-color);
 }
 
 .section {
@@ -140,15 +144,16 @@ body {
 
 .social-text {
   margin: 10px;
-}
-
-.social-link:not(.planet):hover {
-  color: var(--main-color--hover);
-  border-color: var(--main-color--hover);
+  transition: color 1s ease-out;
 }
 
 .social-link:hover .social-icon {
   filter: var(--main-color-filter--hover);
+}
+
+.social-link:hover .social-text {
+  text-decoration: underline;
+  color: var(--main-color);
 }
 
 .social-link .social-name {
