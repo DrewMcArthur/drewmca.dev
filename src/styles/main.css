@@ -33,27 +33,34 @@ body {
   padding: 5vh 5vw;
   height: 90vh;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 
 .header {
-  font-size: 2em;
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: start;
+
+  font-size: 2em;
+  background-color: var(--background-color);
+  width: 100%;
   margin-top: 3.75vh;
   padding-bottom: .2em;
-  background-color: var(--background-color)
 }
 
 #app {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 90vh;
-  overflow-y: hidden;
+
   position: relative;
+  padding-top: 3%;
+  height: 90vh;
+
+  overflow-x: scoll;
+  overflow-y: hidden;
+
 }
 
 #app:after {
@@ -70,6 +77,8 @@ body {
 .section {
   min-width: 10em;
   max-width: 20em;
+
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 
@@ -89,7 +98,6 @@ body {
 .social-links {
   display: flex;
   flex-direction: column;
-  margin-top: 0.25em;
 }
 
 .social-link {
