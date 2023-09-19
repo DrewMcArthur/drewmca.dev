@@ -81,6 +81,17 @@ body {
   justify-content: space-around;
 }
 
+.section-header {
+  color: var(--light-color);
+  text-decoration: none;
+  transition: text-decoration .1s ease-out, color .1s ease-out;
+}
+
+.section-header.active {
+  text-decoration: underline;
+  color: var(--main-color)
+}
+
 .section {
   min-width: 10em;
   max-width: 20em;
