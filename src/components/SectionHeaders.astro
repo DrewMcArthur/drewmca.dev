@@ -1,0 +1,28 @@
+
+<div class="section-headers">
+    <a href="#about" class="section-header about active">about</span>
+    <a href="#links" class="section-header links">contact</span>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const app = document.querySelector('#app')!;
+        const sections: NodeListOf<HTMLElement> = document.querySelectorAll('#app > div');
+        const navLinks = document.querySelectorAll('.section-header');
+        
+        app.addEventListener('scroll', () => {
+            const appScrollLeft = app.scrollLeft;
+            
+            sections.forEach((section, index) => {
+                const sectionLeft = section.offsetLeft;
+                const sectionWidth = section.offsetWidth;
+            
+                if (appScrollLeft >= sectionLeft - sectionWidth / 2 && appScrollLeft < sectionLeft + sectionWidth / 2) {
+                    navLinks[index].classList.add('active');
+                } else {
+                    navLinks[index].classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
