@@ -17,8 +17,6 @@
   --flyin-timing: cubic-bezier(0, 1, 0, 1);
 }
 
-html {}
-
 body {
   display: flex;
   flex-direction: column;
@@ -82,8 +80,6 @@ body {
   flex-direction: row;
   justify-content: space-around;
 }
-
-.section-header {}
 
 .section {
   min-width: 10em;
