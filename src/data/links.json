@@ -6,57 +6,57 @@
       "url": "mailto:hi@drewmca.dev"
     },
     {
-      "type": "github",
+      "type": "GitHub",
       "text": "@drewmcarthur",
       "url": "https://github.com/drewmcarthur"
     },
     {
-      "type": "gitlab",
+      "type": "GitLab",
       "text": "@drewmcarthur",
       "url": "https://gitlab.com/drewmcarthur"
     },
     {
-      "type": "linkedin",
+      "type": "LinkedIn",
       "text": "@drewmcarthur",
       "url": "https://linkedin.com/in/drewmcarthur"
     },
     {
-      "type": "facebook",
+      "type": "Facebook",
       "text": "@drewdiezel",
       "url": "https://www.facebook.com/drewdiezel/"
     },
     {
-      "type": "instagram",
+      "type": "Instagram",
       "text": "@drewdiezel",
       "url": "https://instagram.com/drewdiezel"
     },
     {
-      "type": "threads",
+      "type": "Threads",
       "text": "@drewdiezel",
       "url": "https://www.threads.net/@drewdiezel"
     },
     {
-      "type": "bsky",
+      "type": "Bluesky",
       "text": "@drewmca.dev",
       "url": "https://bsky.app/profile/drewmca.dev"
     },
     {
-      "type": "mastodon",
+      "type": "Mastodon",
       "text": "@drewmca@social.coop",
       "url": "https://social.coop/@drewmca"
     },
     {
-      "type": "twitter",
+      "type": "Twitter",
       "text": "@drewdiezel",
       "url": "https://twitter.com/drewdiezel"
     },
     {
-      "type": "discord",
+      "type": "Discord",
       "text": "@drewdiezel",
       "url": "https://discordapp.com/users/brew#8567"
     },
     {
-      "type": "telegram",
+      "type": "Telegram",
       "text": "@drewmcarthur",
       "url": "https://t.me/drewmcarthur"
     }
