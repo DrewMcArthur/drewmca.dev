@@ -10,7 +10,7 @@ const { data } = Astro.props;
   target="_blank"
   rel="noopener noreferrer"
 >
-  <SimpleIcon name={data.type} />
+  <SimpleIcon name={data.type.toLowerCase()} />
   {
     data.type !== "gmail" ? (
       <>
