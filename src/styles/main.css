@@ -79,14 +79,12 @@ a {
 }
 
 .section-headers {
-  display: none;
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
 .section-header {
-  color: var(--light-color);
-  text-decoration: none;
   transition: text-decoration .1s ease-out, color .1s ease-out;
 }
 
@@ -215,8 +213,9 @@ a {
     width: 210%;
   }
 
-  .section-headers {
-    display: flex;
+  .section-header {
+    color: var(--light-color);
+    text-decoration: none;
   }
 
   .section {
