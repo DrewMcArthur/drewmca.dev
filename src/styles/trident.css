@@ -47,6 +47,7 @@ audio {
 }
 
 .footer-info>p {
+    margin-top: 1.5em;
     font-size: .7em;
     font-style: italic;
 }
