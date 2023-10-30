@@ -44,7 +44,8 @@ audio {
     overflow-y: scroll;
     font-size: .8em;
     padding: 0 1vw;
-    border-left: 2px solid darkgray
+    border-left: 2px solid darkgray;
+    min-height: 50vh;
 }
 
 .transcript>p:first-child {
