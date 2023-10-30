@@ -160,7 +160,8 @@ import "../../styles/trident.css";
           let interval: number;
 
           function updateScrollPosition() {
-            const proportionPlayed = (audio.currentTime - 15) / audio.duration;
+            const proportionPlayed =
+              (audio.currentTime - 15) / (audio.duration - 15);
             transcriptDiv.scrollTop = proportionPlayed * scrollHeight;
           }
 
