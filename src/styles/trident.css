@@ -1,0 +1,38 @@
+body {
+    background-color: white;
+    max-width: 580px;
+    margin: auto;
+    overflow: auto;
+}
+
+audio {
+    width: 70%;
+}
+
+.trident-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.trident-logo {
+    width: 100px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.date {
+    font-size: .7em;
+    font-style: italic;
+    text-align: right;
+}
+
+.transcript {
+    height: 400px;
+    overflow-y: scroll;
+    font-size: .8em;
+}
+
+.footer-info>p {
+    font-size: .7em;
+    font-style: italic;
+}
