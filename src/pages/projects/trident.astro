@@ -161,14 +161,14 @@ import "../../styles/trident.css";
 
           function updateScrollPosition() {
             const proportionPlayed =
-              (audio.currentTime - 15) / (audio.duration - 35);
+              (audio.currentTime - 22) / (audio.duration - 55);
             transcriptDiv.scrollTop = proportionPlayed * scrollHeight;
           }
 
           audio.addEventListener("play", function () {
             updateScrollPosition(); // Initialize scroll position
 
-            interval = setInterval(updateScrollPosition, 25); // Update every 50ms for smoother scrolling
+            interval = setInterval(updateScrollPosition, 300); // Update every 50ms for smoother scrolling
           });
 
           // Stop scrolling when audio is paused or ended
