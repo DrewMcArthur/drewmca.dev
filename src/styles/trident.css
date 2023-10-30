@@ -19,6 +19,7 @@ audio {
 .trident-header h1 {
     align-self: end;
     margin-left: -0.15em;
+    color: #1c2424;
 }
 
 .trident-logo {
