@@ -3,6 +3,8 @@ body {
     max-width: 580px;
     margin: auto;
     overflow: auto;
+    padding: 3vh;
+    height: 94vh;
 }
 
 audio {
@@ -26,10 +28,19 @@ audio {
     text-align: right;
 }
 
+.lead {
+    font-size: .8em;
+}
+
 .transcript {
-    height: 400px;
     overflow-y: scroll;
     font-size: .8em;
+    padding: 0 1vw;
+    border-left: 2px solid darkgray
+}
+
+.transcript>p:first-child {
+    margin-top: 0;
 }
 
 .footer-info>p {
