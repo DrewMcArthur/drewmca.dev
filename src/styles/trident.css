@@ -16,6 +16,10 @@ audio {
     justify-content: space-between;
 }
 
+.trident-header h1 {
+    align-self: end;
+}
+
 .trident-logo {
     width: 100px;
     display: flex;
@@ -25,7 +29,6 @@ audio {
 .date {
     font-size: .7em;
     font-style: italic;
-    text-align: right;
 }
 
 .lead {
