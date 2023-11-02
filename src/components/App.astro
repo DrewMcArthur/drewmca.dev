@@ -1,13 +1,39 @@
 ---
 import About from "./About.astro";
-import Header from "./Header.astro"
-import SectionHeaders from "./SectionHeaders.astro"
+import SectionHeaders from "./SectionHeaders.astro";
 import SocialLinks from "./SocialLinks.astro";
 ---
 
-<Header />
-<SectionHeaders />
-<div id="app" class="">
-<About />
-<SocialLinks />
+<div id="main">
+  <header>
+    <nav>
+      <div class="header">
+        <a href="/">drewmca.dev</a> / <span class="current-page">About</span>
+      </div>
+      <ul class="sibling-pages">
+        <li>
+          <a href="/about">About</a>
+        </li>
+        <li>
+          <a href="/contact">Contact</a>
+        </li>
+        <li>
+          <a href="/projects">Projects</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <SectionHeaders />
+  <div id="app" class="">
+    <About />
+    <SocialLinks />
+  </div>
 </div>
+<script>
+  const currentPageTitle = document.querySelector("span.current-page");
+  // currentPageTitle.onclick = () => {
+  //     const siblingPagesList = document.querySelector("ul.sibling-pages");
+  //     siblingPagesList?.attributes.toggle("hidden");
+  // }
+</script>

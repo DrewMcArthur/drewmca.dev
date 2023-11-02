@@ -1,0 +1,36 @@
+---
+const { breadcrumbs, childPages } = $$props;
+---
+
+<header>
+  <!-- Display breadcrumbs -->
+  <nav>
+    <ul>
+      {
+        breadcrumbs.map((crumb, index) => (
+          <li>
+            <a href={crumb.link}>{crumb.label}</a>
+            {index < breadcrumbs.length - 1 ? " > " : ""}
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+
+  <!-- Display page title -->
+  <h1>{breadcrumbs[breadcrumbs.length - 1].label}</h1>
+
+  <!-- Display child pages as dropdown -->
+  <div>
+    <button>Child Pages</button>
+    <ul>
+      {
+        childPages.map((page) => (
+          <li>
+            <a href={page.link}>{page.label}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</header>

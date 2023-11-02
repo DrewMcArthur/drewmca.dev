@@ -36,6 +36,12 @@ body {
   overflow-x: hidden;
 }
 
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
 a {
   color: var(--main-color);
 }
@@ -46,9 +52,11 @@ a {
   justify-content: start;
 
   font-size: 2em;
-  background-color: var(--background-color);
   width: 100%;
   margin-top: 3.75vh;
+}
+
+#main .header {
   padding: 0 3.75vw 0.5em 3.75vw;
 }
 
@@ -224,4 +232,9 @@ a {
     scroll-behavior: smooth;
     scroll-margin-left: -1.1125vw;
   }
+}
+
+ul.projects span.year {
+  margin-left: -1em;
+
 }
