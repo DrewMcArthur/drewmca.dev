@@ -1,10 +1,55 @@
 ---
-const { breadcrumbs, childPages } = $$props;
+import {
+  SitemapPage,
+  getChildrenFromPathname,
+  getPageMetadata,
+} from "../scripts/page-title";
+
+const crumbs: string[] = Astro.url.pathname
+  .split("/")
+  .filter((crumb: string) => crumb !== "");
+
+const page: SitemapPage = await getPageMetadata(Astro.url.pathname);
 ---
 
 <header>
-  <!-- Display breadcrumbs -->
   <nav>
+    <div class="header">
+      <a href="/">drewmca.dev</a>
+      {
+        crumbs.map((crumb: string, index: number) => (
+          <>
+            <span class="slash">/</span>
+            <span class="current-page">{page.title}</span>
+          </>
+        ))
+      }
+      <span class="dropdown">&gt;</span>
+    </div>
+    <ul class="sibling-pages" hidden>
+      {
+        children.map((child) => (
+          <li>
+            <a href={child.path}>{child.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const siblingPagesList = document.querySelector("ul.sibling-pages")!;
+    const currentPageTitle = document.querySelector("span.current-page")!;
+    currentPageTitle.addEventListener("click", () => {
+      siblingPagesList.toggleAttribute("hidden");
+    });
+  });
+</script>
+
+<!-- <header> -->
+<!-- Display breadcrumbs -->
+<!-- <nav>
     <ul>
       {
         breadcrumbs.map((crumb, index) => (
@@ -15,13 +60,13 @@ const { breadcrumbs, childPages } = $$props;
         ))
       }
     </ul>
-  </nav>
+  </nav> -->
 
-  <!-- Display page title -->
-  <h1>{breadcrumbs[breadcrumbs.length - 1].label}</h1>
+<!-- Display page title -->
+<!-- <h1>{breadcrumbs[breadcrumbs.length - 1].label}</h1> -->
 
-  <!-- Display child pages as dropdown -->
-  <div>
+<!-- Display child pages as dropdown -->
+<!-- <div>
     <button>Child Pages</button>
     <ul>
       {
@@ -33,4 +78,4 @@ const { breadcrumbs, childPages } = $$props;
       }
     </ul>
   </div>
-</header>
+</header> -->

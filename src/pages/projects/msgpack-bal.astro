@@ -1,36 +1,27 @@
 ---
-import "../../styles/main.css";
+import PageTemplate from "../../components/PageTemplate.astro";
 ---
 
-<html>
-  <head>
-    <title>drewmca.dev | Projects | msgpack-bal</title>
-  </head>
-  <body>
-    <div class="header">
-      <a href="/">drewmca.dev</a> | <a href="/projects">Projects</a> |
-      msgpack-bal
-    </div>
-    <p>
-      A library for encoding and decoding according to the msgpack specification
-      in the ballerina language.
-    </p>
-    <p>
-      <a href="https://msgpack.org">MessagePack</a> is a serialization protocol.
-      It defines rules for encoding json objects in binary, usually for
-      transmission across a network, and <a href="https://ballerina.io"
-        >Ballerina</a
-      > is a cloud-native programming language optimized for integration.
-    </p>
-    <p>
-      I was interested in writing a Ballerina service that interfaced with an
-      existing protocol that required msgpack, and found no library existed for
-      it yet, so I built it. Fun project!
-    </p>
-    <p>
-      Check out <a href="https://github.com/drewmcarthur/msgpack-bal"
-        >the git repo</a
-      > for more.
-    </p>
-  </body>
-</html>
+<PageTemplate>
+  <p>
+    A library for encoding and decoding according to the msgpack specification
+    in the ballerina language.
+  </p>
+  <p>
+    <a href="https://msgpack.org">MessagePack</a> is a serialization protocol.
+    It defines rules for encoding json objects in binary, usually for
+    transmission across a network, and <a href="https://ballerina.io"
+      >Ballerina</a
+    > is a cloud-native programming language optimized for integration.
+  </p>
+  <p>
+    I was interested in writing a Ballerina service that interfaced with an
+    existing protocol that required msgpack, and found no library existed for it
+    yet, so I built it. Fun project!
+  </p>
+  <p>
+    Check out <a href="https://github.com/drewmcarthur/msgpack-bal"
+      >the git repo</a
+    > for more.
+  </p>
+</PageTemplate>

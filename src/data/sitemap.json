@@ -1,0 +1,28 @@
+{
+    "path": "/",
+    "title": "",
+    "children": [
+        {
+            "path": "/about",
+            "title": "About"
+        },
+        {
+            "title": "Projects",
+            "path": "/projects",
+            "children": [
+                {
+                    "title": "Trident Audio Tour",
+                    "path": "/projects/trident"
+                },
+                {
+                    "title": "msgpack-bal",
+                    "path": "/projects/msgpack-bal"
+                }
+            ]
+        },
+        {
+            "title": "Contact",
+            "path": "/contact"
+        }
+    ]
+}

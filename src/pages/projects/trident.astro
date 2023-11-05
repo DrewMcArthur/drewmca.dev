@@ -1,193 +1,176 @@
 ---
-import "../../styles/main.css";
+import PageTemplate from "../../components/PageTemplate.astro";
 import "../../styles/trident.css";
 ---
 
-<html>
-  <head>
-    <title>drewmca.dev | Projects | Trident Audio Tour</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-  </head>
-  <body>
-    <div class="trident-header">
-      <div class="header">
-        <a href="/">drewmca.dev</a> | <a href="/projects">Projects</a> | Trident
-        Audio Tour
-      </div>
-      <img
-        src="/images/trident-logo.jpeg"
-        alt="Trident Logo"
-        class="trident-logo"
-      />
-    </div>
-    <span class="date">October 30, 2023</span>
-    <p class="lead">
-      <em>
-        Trident is an employee-owned bookstore and cafe located in Boulder,
-        Colorado. Experience an audio tour of the location below, produced for
-        MDST 5001 at CU Boulder.
-      </em>
-    </p>
-  </body>
-  <div class="audio-player">
-    <audio controls>
-      <source src="/audio/tour.mp3" type="audio/mp3" />
-    </audio>
+<PageTemplate>
+  <div class="trident-header">
+    <img
+      src="/images/trident-logo.jpeg"
+      alt="Trident Logo"
+      class="trident-logo"
+    />
   </div>
-  <h4 class="transcript-title">Transcript</h4>
-  <div class="transcript">
-    <p>
-      <em>
-        Hi, could I get a large history of the place with an extra shot of
-        espresso?
-      </em>
-    </p>
-    <p>
-      Trident booksellers and cafe has been a fixture of downtown Boulder since
-      it opened in 1980, located on Pearl street between ninth and 10th streets.
-    </p>
-    <p>
-      Hudson Shotwell and James Gimian were two students of Chogyam Trungpa,
-      Rinpoche in the 1970s. He was one of the first Tibetan Buddhists to come
-      to the West. They were encouraged to practice right livelihood and make a
-      positive impact on their community.
-    </p>
-    <p>
-      They had previously worked for book companies in California and came on as
-      some of the first employees of Shambala publications, which started in the
-      back of where Trident stands today. When the space became available for
-      lease, they decided to open a bookstore here, in order to practice that
-      right livelihood as a way to spread knowledge, intellectualism, and
-      conversation.
-    </p>
-    <p>
-      In 1981, after a year of being a bookstore, they decided to add an
-      espresso machine - the first location to offer that in Boulder and
-      Colorado. In the years that followed, some of the original founders moved,
-      spreading the idea of a joint bookstore and cafe to Halifax, Nova Scotia,
-      and Boston. The founders agreed to share the iconography and the name, but
-      did not share any relation other than their guiding principles.
-    </p>
-    <p>
-      The current general manager, Peter Jones, had previously worked at Trident
-      as the bookstore manager.
-    </p>
-    <p>
-      <em>
-        My name's Peter Jones, I'm the general manager at Trident Booksellers
-        and Cafe.
-      </em>
-    </p>
-    <p>
-      He then returned to take over in 2016 when the general manager before him
-      retired. At that time, Trident was owned by three families. Each with
-      their own idea for the direction of Trident.
-    </p>
-    <p>
-      There was tension between their profit-driven ideas for the business and
-      Peter's experience and recommendations grounded in his work, running the
-      storefront. In 2020, COVID-19 and the pandemic was causing hardship for
-      local businesses and the path forward wasn't clear. This exacerbated
-      tensions and Peter was fired that summer.
-    </p>
-    <p>
-      Trident's owners quickly realized, however, that they lacked the
-      experience and expertise required to run their business. Two weeks later,
-      they were calling Peter asking for his return. His only condition? Make
-      Trident employee-owned.
-    </p>
-    <p>
-      To him, external ownership was the core issue. Those families may own the
-      business, but they don't know what makes it run. Why should they be the
-      ones calling the shots? By reclaiming ownership of the business for its
-      employees, those decisions would be made by people involved in the actual
-      operations.
-    </p>
-    <p>
-      After some back and forth, the owners agreed on this path forward.
-      Documents were written up, outlining the value of the business, number of
-      shares, and other technical details. Later that summer, in July of 2020,
-      12 of Trident's employees bought shares in their employer, making the
-      business employee-owned.
-    </p>
-    <p>
-      Today, that number has grown to about 20 with two thirds of the company's
-      shares owned by the employees. And now Trident holds monthly meetings with
-      reports and proposals where each owner gets an equal vote in the process.
-    </p>
-    <p>
-      Shares represent proportional ownership, and decide how the profit
-      disbursement is split, but decisions, including whether or not to have a
-      disbursement, are made equally, with everyone at the table. From
-      purchasing a new espresso machine, to hosting events; any decisions that
-      were made in the running of Trident, were made together.
-    </p>
-    <p>
-      Today Trident is fulfilling its original vision of right livelihood, not
-      only by selling books and sharing knowledge and conversation, but also by
-      offering its employees the opportunity to participate in the decisions
-      made in their workplace, and to own a stake in the business that they
-      collectively run and contribute their time and energy to.
-    </p>
-    <p>
-      For 43 years, Trident has provided downtown Boulder with literature,
-      coffee, and community, supporting a wide array of live events in the
-      evenings and hosting dozens of people in the cafe and on its patio each
-      day.
-    </p>
-    <p>
-      Trident is a pillar in the Boulder community and a shining example of
-      where work can be more than just a job, but a path toward a right and just
-      livelihood.
-    </p>
-  </div>
-  <div class="footer-info">
-    <p>
-      The audio tour and website were produced by <a href="https://drewmca.dev"
-        >Drew McArthur</a
-      >, and are not affiliated with Trident. You can download the audio in mp3
-      format <a href="/audio/tour.mp3" target="_blank">here</a>. For more, visit
+  <span class="date">October 30, 2023</span>
+  <p class="lead">
+    <em>
+      Trident is an employee-owned bookstore and cafe located in Boulder,
+      Colorado. Experience an audio tour of the location below, produced for
+      MDST 5001 at CU Boulder.
+    </em>
+  </p>
+</PageTemplate>
+<div class="audio-player">
+  <audio controls>
+    <source src="/audio/tour.mp3" type="audio/mp3" />
+  </audio>
+</div>
+<h4 class="transcript-title">Transcript</h4>
+<div class="transcript">
+  <p>
+    <em>
+      Hi, could I get a large history of the place with an extra shot of
+      espresso?
+    </em>
+  </p>
+  <p>
+    Trident booksellers and cafe has been a fixture of downtown Boulder since it
+    opened in 1980, located on Pearl street between ninth and 10th streets.
+  </p>
+  <p>
+    Hudson Shotwell and James Gimian were two students of Chogyam Trungpa,
+    Rinpoche in the 1970s. He was one of the first Tibetan Buddhists to come to
+    the West. They were encouraged to practice right livelihood and make a
+    positive impact on their community.
+  </p>
+  <p>
+    They had previously worked for book companies in California and came on as
+    some of the first employees of Shambala publications, which started in the
+    back of where Trident stands today. When the space became available for
+    lease, they decided to open a bookstore here, in order to practice that
+    right livelihood as a way to spread knowledge, intellectualism, and
+    conversation.
+  </p>
+  <p>
+    In 1981, after a year of being a bookstore, they decided to add an espresso
+    machine - the first location to offer that in Boulder and Colorado. In the
+    years that followed, some of the original founders moved, spreading the idea
+    of a joint bookstore and cafe to Halifax, Nova Scotia, and Boston. The
+    founders agreed to share the iconography and the name, but did not share any
+    relation other than their guiding principles.
+  </p>
+  <p>
+    The current general manager, Peter Jones, had previously worked at Trident
+    as the bookstore manager.
+  </p>
+  <p>
+    <em>
+      My name's Peter Jones, I'm the general manager at Trident Booksellers and
+      Cafe.
+    </em>
+  </p>
+  <p>
+    He then returned to take over in 2016 when the general manager before him
+    retired. At that time, Trident was owned by three families. Each with their
+    own idea for the direction of Trident.
+  </p>
+  <p>
+    There was tension between their profit-driven ideas for the business and
+    Peter's experience and recommendations grounded in his work, running the
+    storefront. In 2020, COVID-19 and the pandemic was causing hardship for
+    local businesses and the path forward wasn't clear. This exacerbated
+    tensions and Peter was fired that summer.
+  </p>
+  <p>
+    Trident's owners quickly realized, however, that they lacked the experience
+    and expertise required to run their business. Two weeks later, they were
+    calling Peter asking for his return. His only condition? Make Trident
+    employee-owned.
+  </p>
+  <p>
+    To him, external ownership was the core issue. Those families may own the
+    business, but they don't know what makes it run. Why should they be the ones
+    calling the shots? By reclaiming ownership of the business for its
+    employees, those decisions would be made by people involved in the actual
+    operations.
+  </p>
+  <p>
+    After some back and forth, the owners agreed on this path forward. Documents
+    were written up, outlining the value of the business, number of shares, and
+    other technical details. Later that summer, in July of 2020, 12 of Trident's
+    employees bought shares in their employer, making the business
+    employee-owned.
+  </p>
+  <p>
+    Today, that number has grown to about 20 with two thirds of the company's
+    shares owned by the employees. And now Trident holds monthly meetings with
+    reports and proposals where each owner gets an equal vote in the process.
+  </p>
+  <p>
+    Shares represent proportional ownership, and decide how the profit
+    disbursement is split, but decisions, including whether or not to have a
+    disbursement, are made equally, with everyone at the table. From purchasing
+    a new espresso machine, to hosting events; any decisions that were made in
+    the running of Trident, were made together.
+  </p>
+  <p>
+    Today Trident is fulfilling its original vision of right livelihood, not
+    only by selling books and sharing knowledge and conversation, but also by
+    offering its employees the opportunity to participate in the decisions made
+    in their workplace, and to own a stake in the business that they
+    collectively run and contribute their time and energy to.
+  </p>
+  <p>
+    For 43 years, Trident has provided downtown Boulder with literature, coffee,
+    and community, supporting a wide array of live events in the evenings and
+    hosting dozens of people in the cafe and on its patio each day.
+  </p>
+  <p>
+    Trident is a pillar in the Boulder community and a shining example of where
+    work can be more than just a job, but a path toward a right and just
+    livelihood.
+  </p>
+</div>
+<div class="footer-info">
+  <p>
+    The audio tour and website were produced by <a href="https://drewmca.dev"
+      >Drew McArthur</a
+    >, and are not affiliated with Trident. You can download the audio in mp3
+    format <a href="/audio/tour.mp3" target="_blank">here</a>. For more, visit
 
+    <a href="https://www.tridentcafe.com" target="_blank">tridentcafe.com</a>
+  </p>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const audio = document.querySelector("audio")!;
+      const transcriptDiv = document.querySelector(".transcript")!;
 
-      <a href="https://www.tridentcafe.com" target="_blank">tridentcafe.com</a>
-    </p>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const audio = document.querySelector("audio")!;
-        const transcriptDiv = document.querySelector(".transcript")!;
+      const scrollHeight =
+        transcriptDiv.scrollHeight - transcriptDiv.clientHeight;
+      let interval: number;
 
-        const scrollHeight =
-          transcriptDiv.scrollHeight - transcriptDiv.clientHeight;
-        let interval: number;
+      function updateScrollPosition() {
+        const proportionPlayed =
+          (audio.currentTime - 20) / (audio.duration - 55);
+        transcriptDiv.scrollTop = proportionPlayed * scrollHeight;
+      }
 
-        function updateScrollPosition() {
-          const proportionPlayed =
-            (audio.currentTime - 20) / (audio.duration - 55);
-          transcriptDiv.scrollTop = proportionPlayed * scrollHeight;
-        }
+      audio.addEventListener("play", function () {
+        updateScrollPosition(); // Initialize scroll position
 
-        audio.addEventListener("play", function () {
-          updateScrollPosition(); // Initialize scroll position
-
-          interval = setInterval(updateScrollPosition, 300); // Update every 50ms for smoother scrolling
-        });
-
-        // Stop scrolling when audio is paused or ended
-        audio.addEventListener("pause", function () {
-          clearInterval(interval);
-        });
-
-        audio.addEventListener("ended", function () {
-          clearInterval(interval);
-        });
-
-        audio.addEventListener("seeked", updateScrollPosition); // Update scroll when user seeks in audio
+        interval = setInterval(updateScrollPosition, 300); // Update every 50ms for smoother scrolling
       });
-    </script>
-  </div>
-</html>
+
+      // Stop scrolling when audio is paused or ended
+      audio.addEventListener("pause", function () {
+        clearInterval(interval);
+      });
+
+      audio.addEventListener("ended", function () {
+        clearInterval(interval);
+      });
+
+      audio.addEventListener("seeked", updateScrollPosition); // Update scroll when user seeks in audio
+    });
+  </script>
+</div>

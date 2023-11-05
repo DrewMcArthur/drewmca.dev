@@ -1,25 +1,8 @@
 ---
-import "../../styles/main.css";
+import PageTemplate from "../../components/PageTemplate.astro";
+import Projects from "../../components/Projects.astro";
 ---
 
-<html>
-  <head>
-    <title>drewmca.dev | Projects</title>
-  </head>
-  <body>
-    <div class="header"><a href="/">drewmca.dev</a>&nbsp;/ Projects</div>
-    <p></p>
-    <p>Here are some of the projects I've worked on:</p>
-    <ul class="projects">
-      <span class="year">2023</span>
-      <p>
-        <a href="/projects/msgpack-bal">msgpack-bal</a>, a msgpack library
-        written in ballerina.
-      </p>
-      <p>
-        <a href="/projects/trident">Trident Audio Tour</a>, a class project on a
-        local bookstore and cafe.
-      </p>
-    </ul>
-  </body>
-</html>
+<PageTemplate>
+  <Projects />
+</PageTemplate>
