@@ -1,4 +1,4 @@
-# contact-page
+# drewmca.dev
 
 ![astro workflow](https://github.com/DrewMcArthur/contact-page/actions/workflows/astro.yml/badge.svg)
 
