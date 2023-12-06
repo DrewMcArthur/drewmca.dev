@@ -1,6 +1,7 @@
 ---
 import InvalidSectionTranscript from "./transcripts/InvalidSectionTranscript.astro";
-import Transcript1 from "./transcripts/Transcript1.astro";
+import Transcript0 from "./transcripts/Transcript0.astro";
+// import Transcript1 from "./transcripts/Transcript1.astro";
 import Transcript9 from "./transcripts/Transcript9.astro";
 import { sections } from "../../../data/tridentConfig.json";
 
@@ -21,8 +22,8 @@ const scrollTotalOffset = sections[section]?.scrollTotalOffset;
 <h4 class="transcript-title">Transcript</h4>
 <div id="transcript">
   {
-    section == 1 ? (
-      <Transcript1 />
+    section == 0 ? (
+      <Transcript0 />
     ) : section == 9 ? (
       <Transcript9 />
     ) : (
