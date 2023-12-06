@@ -1,16 +1,19 @@
 ---
 import "../../../styles/trident/nav-buttons.css";
-import { Section } from "./TridentSection.astro";
-const section = Astro.props.section as Section as unknown as number;
+import { sections } from "../../../data/tridentConfig.json";
+const section = Astro.props.section as number;
 const prevUrl = `/projects/trident/section/${section - 1}`;
 const nextUrl = `/projects/trident/section/${section + 1}`;
 ---
 
 <div class="prev-next-buttons">
-  <a href={prevUrl} class={`nav-button prev ${section < 2 && "hidden"}`}>
+  <a href={prevUrl} class={`nav-button prev ${section <= 0 && "hidden"}`}>
     <span>&larr;</span>
   </a>
-  <a href={nextUrl} class={`nav-button next ${section > 8 && "hidden"}`}>
+  <a
+    href={nextUrl}
+    class={`nav-button next ${section >= sections.length && "hidden"}`}
+  >
     <span>&rarr;</span>
   </a>
 </div>

@@ -4,10 +4,10 @@ import "../../../styles/trident/trident.css";
 
 import TridentFooter from "./TridentFooter.astro";
 import TridentPrevNextButtons from "./TridentPrevNextButtons.astro";
-import TridentSection, { Section } from "./TridentSection.astro";
+import TridentSection from "./TridentSection.astro";
 import TridentSectionSelector from "./TridentSectionSelector.astro";
 
-const section = Astro.props.section as Section;
+const section = Astro.props.section as number;
 ---
 
 <html>

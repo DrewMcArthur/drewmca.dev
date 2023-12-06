@@ -1,0 +1,40 @@
+{
+    "sections": [
+        {
+            "title": "Introduction",
+            "audioSource": "/audio/tour.mp3",
+            "scrollStartOffset": "0",
+            "scrollTotalOffset": "0"
+        },
+        {
+            "title": "The History",
+            "audioSource": "/audio/history.mp3",
+            "scrollStartOffset": "0",
+            "scrollTotalOffset": "0"
+        },
+        {
+            "title": "The Formation",
+            "audioSource": "/audio/formation.mp3",
+            "scrollStartOffset": "0",
+            "scrollTotalOffset": "0"
+        },
+        {
+            "title": "Full Interview - Peter Jones",
+            "audioSource": "/audio/formation.mp3",
+            "scrollStartOffset": "0",
+            "scrollTotalOffset": "0"
+        },
+        {
+            "title": "Full Interview - Caroline Shaw",
+            "audioSource": "/audio/formation.mp3",
+            "scrollStartOffset": "0",
+            "scrollTotalOffset": "0"
+        },
+        {
+            "title": "(Bonus) Audio Tour",
+            "audioSource": "/audio/tour.mp3",
+            "scrollStartOffset": "20",
+            "scrollTotalOffset": "55"
+        }
+    ]
+}

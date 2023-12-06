@@ -2,69 +2,16 @@
 import InvalidSectionTranscript from "./transcripts/InvalidSectionTranscript.astro";
 import Transcript1 from "./transcripts/Transcript1.astro";
 import Transcript9 from "./transcripts/Transcript9.astro";
+import { sections } from "../../../data/tridentConfig.json";
 
-export type Section = "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
-const section = Astro.props.section as Section;
+const section = Astro.props.section as number;
 
-const audioFilesBySection: Record<Section, string> = {
-  "1": "/audio/tour.mp3",
-  "2": "/audio/tour.mp3",
-  "3": "/audio/tour.mp3",
-  "4": "/audio/tour.mp3",
-  "5": "/audio/tour.mp3",
-  "6": "/audio/tour.mp3",
-  "7": "/audio/tour.mp3",
-  "8": "/audio/tour.mp3",
-  "9": "/audio/tour.mp3",
-};
-const scrollOffsetsBySection: Record<
-  Section,
-  Record<"start" | "total", string>
-> = {
-  "1": {
-    start: "0",
-    total: "0",
-  },
-  "2": {
-    start: "0",
-    total: "0",
-  },
-  "3": {
-    start: "0",
-    total: "0",
-  },
-  "4": {
-    start: "0",
-    total: "0",
-  },
-  "5": {
-    start: "0",
-    total: "0",
-  },
-  "6": {
-    start: "0",
-    total: "0",
-  },
-  "7": {
-    start: "0",
-    total: "0",
-  },
-  "8": {
-    start: "0",
-    total: "0",
-  },
-  "9": {
-    start: "20",
-    total: "55",
-  },
-};
-
-const audioSourceFile: string = audioFilesBySection[section];
-const scrollStartOffset = scrollOffsetsBySection[section]?.start;
-const scrollTotalOffset = scrollOffsetsBySection[section]?.total;
+const audioSourceFile: string = sections[section]?.audioSource;
+const scrollStartOffset = sections[section]?.scrollStartOffset;
+const scrollTotalOffset = sections[section]?.scrollTotalOffset;
 ---
 
-<meta name="section" content={section} />
+<meta name="section" content={`${section}`} />
 <meta name="scrollStartOffset" content={scrollStartOffset} />
 <meta name="scrollTotalOffset" content={scrollTotalOffset} />
 
@@ -74,9 +21,9 @@ const scrollTotalOffset = scrollOffsetsBySection[section]?.total;
 <h4 class="transcript-title">Transcript</h4>
 <div id="transcript">
   {
-    section == "1" ? (
+    section == 1 ? (
       <Transcript1 />
-    ) : section == "9" ? (
+    ) : section == 9 ? (
       <Transcript9 />
     ) : (
       <InvalidSectionTranscript />

@@ -1,37 +1,25 @@
 ---
-import { Section } from "./TridentSection.astro";
-import TridentSectionLink from "./TridentSectionLink.astro";
-
 import "../../../styles/trident/section-selector.css";
+import TridentSectionLink from "./TridentSectionLink.astro";
+import { sections } from "../../../data/tridentConfig.json";
 
-export const sectionTitles = {
-  "1": "Introduction",
-  "2": "History",
-  "3": "Formation",
-  "4": "The Stories",
-  "5": "extra?",
-  "6": "extra?",
-  "7": "Full Interview - Peter Jones",
-  "8": "Full Interview - Caroline Shaw",
-  "9": "(Bonus) Audio Tour",
-};
-
-const section = Astro.props.section as Section;
-const currentTitle = sectionTitles[section];
+const section = Astro.props.section as number;
+const currentTitle = sections[section].title;
 ---
 
 <div class="dropdown">
   <div class="dropbtn">{section}. {currentTitle}</div>
   <div class="dropdown-content">
-    <TridentSectionLink section="1" />
-    <TridentSectionLink section="2" />
-    <TridentSectionLink section="3" />
-    <TridentSectionLink section="4" />
-    <TridentSectionLink section="5" />
-    <TridentSectionLink section="6" />
-    <TridentSectionLink section="7" />
-    <TridentSectionLink section="8" />
-    <TridentSectionLink section="9" />
+    <TridentSectionLink section={0} />
+    <TridentSectionLink section={1} />
+    <TridentSectionLink section={2} />
+    <TridentSectionLink section={3} />
+    <TridentSectionLink section={4} />
+    <TridentSectionLink section={5} />
+    <TridentSectionLink section={6} />
+    <TridentSectionLink section={7} />
+    <TridentSectionLink section={8} />
+    <TridentSectionLink section={9} />
   </div>
 </div>
 
