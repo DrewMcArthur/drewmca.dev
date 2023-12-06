@@ -1,0 +1,11 @@
+---
+import { Section } from "./TridentSection.astro";
+const section = Astro.props.section as Section as unknown as number;
+const prevUrl = `/projects/trident/section/${section - 1}`;
+const nextUrl = `/projects/trident/section/${section + 1}`;
+---
+
+<div class="prev-next-buttons">
+  {section > 1 && <a href={prevUrl}>Prev</a>}
+  {section < 9 && <a href={nextUrl}>Next</a>}
+</div>

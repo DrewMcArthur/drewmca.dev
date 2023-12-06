@@ -40,7 +40,7 @@ audio {
     font-size: .8em;
 }
 
-.transcript {
+#transcript {
     overflow-y: scroll;
     font-size: .8em;
     padding: 0 1vw;
@@ -48,7 +48,7 @@ audio {
     min-height: 50vh;
 }
 
-.transcript>p:first-child {
+#transcript>p:first-child {
     margin-top: 0;
 }
 

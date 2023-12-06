@@ -40,6 +40,10 @@ a {
   color: var(--main-color);
 }
 
+.hidden {
+  display: none;
+}
+
 .header {
   display: flex;
   flex-direction: row;
