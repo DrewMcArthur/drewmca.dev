@@ -1,4 +1,5 @@
 ---
+import "../../../styles/trident/nav-buttons.css";
 import { Section } from "./TridentSection.astro";
 const section = Astro.props.section as Section as unknown as number;
 const prevUrl = `/projects/trident/section/${section - 1}`;
@@ -6,6 +7,10 @@ const nextUrl = `/projects/trident/section/${section + 1}`;
 ---
 
 <div class="prev-next-buttons">
-  {section > 1 && <a href={prevUrl}>Prev</a>}
-  {section < 9 && <a href={nextUrl}>Next</a>}
+  <a href={prevUrl} class={`nav-button prev ${section < 2 && "hidden"}`}>
+    <span>&larr;</span>
+  </a>
+  <a href={nextUrl} class={`nav-button next ${section > 8 && "hidden"}`}>
+    <span>&rarr;</span>
+  </a>
 </div>

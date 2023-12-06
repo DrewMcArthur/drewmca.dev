@@ -1,0 +1,31 @@
+.prev-next-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-button {
+    display: flex;
+    width: 50px;
+    /* Square shape */
+    height: 50px;
+    border: 1px solid #333;
+    /* Adjust color as needed */
+    text-align: center;
+    line-height: 50px;
+    /* Vertically center the arrow */
+    text-decoration: none;
+    color: #333;
+    /* Adjust color as needed */
+    font-size: 24px;
+    /* Adjust size of the arrow */
+    justify-content: center;
+}
+
+.nav-button.hidden {
+    visibility: hidden;
+}
+
+.nav-button span {
+    display: inline-block;
+    vertical-align: middle;
+}
