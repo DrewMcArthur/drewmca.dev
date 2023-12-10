@@ -31,7 +31,7 @@ const section = Astro.props.section as number;
         class="trident-logo"
       />
     </div>
-    <span class="date">October 30, 2023</span>
+    <span class="date">{section > 7 ? "October 30" : "December 11"}, 2023</span>
     <p class="lead">
       <em>
         Trident is an employee-owned bookstore and cafe located in Boulder,
