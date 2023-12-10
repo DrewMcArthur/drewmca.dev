@@ -78,6 +78,7 @@ const scrollTotalOffset = sections[section]?.scrollTotalOffset;
       const proportionPlayed =
         (audio.currentTime - scrollStartOffset) /
         (audio.duration - scrollTotalOffset);
+      document.scrollingElement!.scrollTop = 295;
       transcriptDiv.scrollTop = proportionPlayed * scrollHeight;
     }
 
@@ -99,3 +100,4 @@ const scrollTotalOffset = sections[section]?.scrollTotalOffset;
     audio.addEventListener("seeked", updateScrollPosition); // Update scroll when user seeks in audio
   });
 </script>
+ ../../../data/tridentConfig

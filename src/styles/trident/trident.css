@@ -8,7 +8,6 @@ body {
     margin: auto;
     overflow: auto;
     padding: 3vh;
-    height: 94vh;
 }
 
 audio {
@@ -41,15 +40,20 @@ audio {
 }
 
 #transcript {
-    overflow-y: scroll;
     font-size: .8em;
     padding: 0 1vw;
     border-left: 2px solid darkgray;
-    min-height: 50vh;
+    flex-shrink: 0;
+    max-height: 71vh;
+    overflow-y: scroll;
 }
 
 #transcript>p:first-child {
     margin-top: 0;
+}
+
+.prev-next-buttons {
+    margin-top: 1.5em;
 }
 
 .footer-info>p {

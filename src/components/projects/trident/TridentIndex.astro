@@ -40,9 +40,7 @@ const section = Astro.props.section as number;
     </p>
 
     <TridentSectionSelector section={section} />
-    <div id="section-content">
-      <TridentSection section={section} />
-    </div>
+    <TridentSection section={section} />
     <TridentPrevNextButtons section={section} />
     <TridentFooter />
   </body>
