@@ -6,19 +6,19 @@
 .nav-button {
     display: flex;
     width: 50px;
-    /* Square shape */
     height: 50px;
-    border: 1px solid #333;
-    /* Adjust color as needed */
+    color: #555;
+    border: 1px solid #555;
     text-align: center;
     line-height: 50px;
-    /* Vertically center the arrow */
     text-decoration: none;
-    color: #333;
-    /* Adjust color as needed */
     font-size: 24px;
-    /* Adjust size of the arrow */
     justify-content: center;
+}
+
+.nav-button:hover {
+    border-color: black;
+    color: black;
 }
 
 .nav-button.hidden {
@@ -28,4 +28,28 @@
 .nav-button span {
     display: inline-block;
     vertical-align: middle;
+}
+
+#autoplay-toggle {
+    display: flex;
+    color: #555;
+    border: 1px solid #555;
+    align-items: center;
+    padding: 5px 15px;
+}
+
+#autoplay-toggle:hover,
+#autoplay-toggle.active label {
+    border-color: black;
+    color: black;
+}
+
+.autoplay {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#autoplay {
+    margin-right: 5px;
 }

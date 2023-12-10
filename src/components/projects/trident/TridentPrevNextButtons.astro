@@ -4,16 +4,15 @@ import { sections } from "../../../data/tridentConfig.json";
 const section = Astro.props.section as number;
 const prevUrl = `/projects/trident/section/${section - 1}`;
 const nextUrl = `/projects/trident/section/${section + 1}`;
-// TODO: based on url param "autoplay = true" set checked var
 ---
 
 <div class="prev-next-buttons">
   <a href={prevUrl} class={`nav-button prev ${section <= 0 && "hidden"}`}>
     <span>&larr;</span>
   </a>
-  <div class="autoplay-toggle">
-    <input type="checkbox" id="autoplay" checked />
-    <label for="autoplay">Autoplay</label>
+  <div id="autoplay-toggle" class="autoplay">
+    <input type="checkbox" id="autoplay" checked class="autoplay" />
+    <label for="autoplay" class="autoplay">Autoplay</label>
   </div>
   <a
     href={nextUrl}
@@ -22,3 +21,44 @@ const nextUrl = `/projects/trident/section/${section + 1}`;
     <span>&rarr;</span>
   </a>
 </div>
+
+<script>
+  function updateQueryParamInLinks(param: string, value: string) {
+    const links = document.querySelectorAll("a");
+    links.forEach((link) => {
+      const url = new URL(link.href);
+      if (url.host === window.location.host) {
+        url.searchParams.set(param, value);
+        link.href = url.toString();
+      }
+    });
+  }
+
+  function updateQueryParam(param: string, value: string) {
+    const currentUrl = new URL(window.location.href);
+    currentUrl.searchParams.set(param, value);
+    window.history.replaceState({}, "", currentUrl);
+    updateQueryParamInLinks(param, value);
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const autoplay = urlParams.get("autoplay") !== "false";
+
+    const autoplayContainer = document.querySelector("#autoplay-toggle")!;
+    const autoplayCheckbox: HTMLInputElement =
+      autoplayContainer.querySelector("#autoplay")!;
+
+    autoplayCheckbox.checked = autoplay;
+
+    autoplayContainer.addEventListener("click", function () {
+      autoplayCheckbox.checked = !autoplayCheckbox.checked;
+
+      if (autoplayCheckbox.checked) autoplayContainer.classList.add("active");
+      else autoplayContainer.classList.remove("active");
+
+      updateQueryParam("autoplay", `${autoplayCheckbox.checked}`);
+    });
+  });
+</script>
