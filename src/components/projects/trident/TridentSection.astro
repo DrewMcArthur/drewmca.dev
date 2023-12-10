@@ -1,9 +1,21 @@
 ---
 import InvalidSectionTranscript from "./transcripts/InvalidSectionTranscript.astro";
-import Transcript0 from "./transcripts/Transcript0.astro";
+import Transcript0 from "./transcripts/Intro.astro";
 // import Transcript1 from "./transcripts/Transcript1.astro";
-import Transcript9 from "./transcripts/Transcript9.astro";
+import Tour from "./transcripts/Tour.astro";
 import { sections } from "../../../data/tridentConfig.json";
+import Transcript1 from "./transcripts/Foundation.astro";
+import Transcript2 from "./transcripts/Transition.astro";
+import Intro from "./transcripts/Intro.astro";
+import Transcript3 from "./transcripts/Ownership.astro";
+import Transcript4 from "./transcripts/Community.astro";
+import Community from "./transcripts/Community.astro";
+import Conclusion from "./transcripts/Conclusion.astro";
+import Foundation from "./transcripts/Foundation.astro";
+import Ownership from "./transcripts/Ownership.astro";
+import Transition from "./transcripts/Transition.astro";
+import Caroline from "./transcripts/Caroline.astro";
+import Peter from "./transcripts/Peter.astro";
 
 const section = Astro.props.section as number;
 
@@ -23,9 +35,23 @@ const scrollTotalOffset = sections[section]?.scrollTotalOffset;
 <div id="transcript">
   {
     section == 0 ? (
-      <Transcript0 />
-    ) : section == 9 ? (
-      <Transcript9 />
+      <Intro />
+    ) : section == 1 ? (
+      <Foundation />
+    ) : section == 2 ? (
+      <Transition />
+    ) : section == 3 ? (
+      <Ownership />
+    ) : section == 4 ? (
+      <Community />
+    ) : section == 5 ? (
+      <Conclusion />
+    ) : section == 6 ? (
+      <Peter />
+    ) : section == 7 ? (
+      <Caroline />
+    ) : section == 8 ? (
+      <Tour />
     ) : (
       <InvalidSectionTranscript />
     )

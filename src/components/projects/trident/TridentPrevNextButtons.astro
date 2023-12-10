@@ -12,7 +12,7 @@ const nextUrl = `/projects/trident/section/${section + 1}`;
   </a>
   <a
     href={nextUrl}
-    class={`nav-button next ${section >= sections.length && "hidden"}`}
+    class={`nav-button next ${section >= sections.length - 1 && "hidden"}`}
   >
     <span>&rarr;</span>
   </a>

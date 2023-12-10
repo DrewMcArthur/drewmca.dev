@@ -2,31 +2,49 @@
     "sections": [
         {
             "title": "Introduction",
-            "audioSource": "/audio/tour.mp3",
+            "audioSource": "/audio/intro.mp3",
             "scrollStartOffset": "0",
             "scrollTotalOffset": "0"
         },
         {
-            "title": "The History",
-            "audioSource": "/audio/history.mp3",
-            "scrollStartOffset": "0",
-            "scrollTotalOffset": "0"
-        },
-        {
-            "title": "The Formation",
+            "title": "Foundation",
             "audioSource": "/audio/formation.mp3",
+            "scrollStartOffset": "0",
+            "scrollTotalOffset": "0"
+        },
+        {
+            "title": "Transition",
+            "audioSource": "/audio/transition.mp3",
+            "scrollStartOffset": "0",
+            "scrollTotalOffset": "0"
+        },
+        {
+            "title": "Ownership",
+            "audioSource": "/audio/ownership.mp3",
+            "scrollStartOffset": "0",
+            "scrollTotalOffset": "0"
+        },
+        {
+            "title": "Community",
+            "audioSource": "/audio/community.mp3",
+            "scrollStartOffset": "0",
+            "scrollTotalOffset": "0"
+        },
+        {
+            "title": "Conclusion",
+            "audioSource": "/audio/conclusion.mp3",
             "scrollStartOffset": "0",
             "scrollTotalOffset": "0"
         },
         {
             "title": "Full Interview - Peter Jones",
-            "audioSource": "/audio/formation.mp3",
+            "audioSource": "/audio/peter.m4a",
             "scrollStartOffset": "0",
             "scrollTotalOffset": "0"
         },
         {
             "title": "Full Interview - Caroline Shaw",
-            "audioSource": "/audio/formation.mp3",
+            "audioSource": "/audio/caroline.m4a",
             "scrollStartOffset": "0",
             "scrollTotalOffset": "0"
         },
