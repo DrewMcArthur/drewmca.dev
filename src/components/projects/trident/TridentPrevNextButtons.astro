@@ -4,12 +4,17 @@ import { sections } from "../../../data/tridentConfig.json";
 const section = Astro.props.section as number;
 const prevUrl = `/projects/trident/section/${section - 1}`;
 const nextUrl = `/projects/trident/section/${section + 1}`;
+// TODO: based on url param "autoplay = true" set checked var
 ---
 
 <div class="prev-next-buttons">
   <a href={prevUrl} class={`nav-button prev ${section <= 0 && "hidden"}`}>
     <span>&larr;</span>
   </a>
+  <div class="autoplay-toggle">
+    <input type="checkbox" id="autoplay" checked />
+    <label for="autoplay">Autoplay</label>
+  </div>
   <a
     href={nextUrl}
     class={`nav-button next ${section >= sections.length - 1 && "hidden"}`}

@@ -69,6 +69,10 @@ const scrollTotalOffset = sections[section]?.scrollTotalOffset;
 
     const audio = document.querySelector("audio")!;
     const transcriptDiv = document.querySelector("#transcript")!;
+    const nextButton: HTMLElement = document.querySelector(".nav-button.next")!;
+    const autoplay: boolean = (
+      document.querySelector("#autoplay")! as HTMLInputElement
+    ).checked;
 
     const scrollHeight =
       transcriptDiv.scrollHeight - transcriptDiv.clientHeight;
@@ -95,9 +99,12 @@ const scrollTotalOffset = sections[section]?.scrollTotalOffset;
 
     audio.addEventListener("ended", function () {
       clearInterval(interval);
+
+      if (autoplay) {
+        setTimeout(() => nextButton.click(), 3000);
+      }
     });
 
     audio.addEventListener("seeked", updateScrollPosition); // Update scroll when user seeks in audio
   });
 </script>
- ../../../data/tridentConfig
