@@ -17,8 +17,15 @@ const currentTitle = sections[section].title;
 <script>
   // on load
   document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector(".dropbtn")!.addEventListener("click", function () {
-      document.querySelector(".dropdown-content")!.classList.toggle("show");
+    const selector = document.querySelector(".dropbtn")!;
+    document.addEventListener("click", function (event) {
+      if (event.target == selector) {
+        selector.classList.toggle("active");
+        document.querySelector(".dropdown-content")!.classList.toggle("show");
+      } else {
+        document.querySelector(".dropdown-content")!.classList.remove("show");
+        selector.classList.remove("active");
+      }
     });
   });
 </script>
