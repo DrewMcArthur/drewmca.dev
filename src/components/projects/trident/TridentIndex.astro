@@ -6,6 +6,7 @@ import TridentFooter from "./TridentFooter.astro";
 import TridentPrevNextButtons from "./TridentPrevNextButtons.astro";
 import TridentSection from "./TridentSection.astro";
 import TridentSectionSelector from "./TridentSectionSelector.astro";
+import { sections } from "../../../data/tridentConfig.json";
 
 const section = Astro.props.section as number;
 ---
@@ -31,7 +32,7 @@ const section = Astro.props.section as number;
         class="trident-logo"
       />
     </div>
-    <span class="date">{section > 7 ? "October 30" : "December 11"}, 2023</span>
+    <span class="date">{sections[section].date}</span>
     <p class="lead">
       <em>
         Trident is an employee-owned bookstore and cafe located in Boulder,

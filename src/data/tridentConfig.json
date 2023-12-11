@@ -4,55 +4,64 @@
             "title": "Introduction",
             "audioSource": "/audio/intro.mp3",
             "scrollStartOffset": "0",
-            "scrollTotalOffset": "0"
+            "scrollTotalOffset": "0",
+            "date": "December 11, 2023"
         },
         {
             "title": "Foundation",
             "audioSource": "/audio/foundation.mp3",
             "scrollStartOffset": "16",
-            "scrollTotalOffset": "72"
+            "scrollTotalOffset": "72",
+            "date": "October 13, 2023"
         },
         {
             "title": "Transition",
             "audioSource": "/audio/transition.mp3",
             "scrollStartOffset": "16",
-            "scrollTotalOffset": "55"
+            "scrollTotalOffset": "55",
+            "date": "October 13, 2023"
         },
         {
             "title": "Ownership",
             "audioSource": "/audio/ownership.mp3",
             "scrollStartOffset": "16",
-            "scrollTotalOffset": "72"
+            "scrollTotalOffset": "72",
+            "date": "December 11, 2023"
         },
         {
             "title": "Community",
             "audioSource": "/audio/community.mp3",
             "scrollStartOffset": "16",
-            "scrollTotalOffset": "72"
+            "scrollTotalOffset": "72",
+            "date": "December 11, 2023"
         },
         {
             "title": "Conclusion",
             "audioSource": "/audio/conclusion.mp3",
             "scrollStartOffset": "0",
-            "scrollTotalOffset": "0"
+            "scrollTotalOffset": "0",
+            "date": "December 11, 2023"
         },
         {
             "title": "Full Interview - Peter Jones",
             "audioSource": "/audio/peter.mp3",
             "scrollStartOffset": "10",
-            "scrollTotalOffset": "45"
+            "scrollTotalOffset": "45",
+            "date": "October 13, 2023"
         },
         {
             "title": "Full Interview - Caroline Shaw",
             "audioSource": "/audio/caroline.mp3",
             "scrollStartOffset": "16",
-            "scrollTotalOffset": "60"
+            "scrollTotalOffset": "60",
+            "date": "November 26, 2023"
         },
         {
             "title": "(Bonus) Audio Tour",
             "audioSource": "/audio/tour.mp3",
             "scrollStartOffset": "20",
-            "scrollTotalOffset": "55"
+            "scrollTotalOffset": "55",
+            "date": "October 30, 2023"
         }
     ]
 }
