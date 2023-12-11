@@ -9,8 +9,8 @@
         {
             "title": "Foundation",
             "audioSource": "/audio/formation.mp3",
-            "scrollStartOffset": "0",
-            "scrollTotalOffset": "0"
+            "scrollStartOffset": "16",
+            "scrollTotalOffset": "72"
         },
         {
             "title": "Transition",

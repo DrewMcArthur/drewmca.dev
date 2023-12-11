@@ -44,7 +44,7 @@ audio {
     padding: 0 1vw;
     border-left: 2px solid darkgray;
     flex-shrink: 0;
-    max-height: 71vh;
+    max-height: 65vh;
     overflow-y: scroll;
 }
 

@@ -2,8 +2,8 @@
 import "../../../styles/trident/nav-buttons.css";
 import { sections } from "../../../data/tridentConfig.json";
 const section = Astro.props.section as number;
-const prevUrl = `/projects/trident/section/${section - 1}`;
-const nextUrl = `/projects/trident/section/${section + 1}`;
+const prevUrl = `/projects/trident/sections/${section - 1}`;
+const nextUrl = `/projects/trident/sections/${section + 1}`;
 ---
 
 <div class="prev-next-buttons">
@@ -11,7 +11,9 @@ const nextUrl = `/projects/trident/section/${section + 1}`;
     <span>&larr;</span>
   </a>
   <div id="autoplay-toggle" class="autoplay">
-    <input type="checkbox" id="autoplay" class="autoplay" />
+    <div id="checkbox-container" class="autoplay">
+      <input type="checkbox" id="autoplay" class="autoplay" />
+    </div>
     <label for="autoplay" class="autoplay">Autoplay</label>
   </div>
   <a
@@ -23,22 +25,10 @@ const nextUrl = `/projects/trident/section/${section + 1}`;
 </div>
 
 <script>
-  function updateQueryParamInLinks(param: string, value: string) {
-    const links = document.querySelectorAll("a");
-    links.forEach((link) => {
-      const url = new URL(link.href);
-      if (url.host == window.location.host) {
-        url.searchParams.set(param, value);
-        link.href = url.toString();
-      }
-    });
-  }
-
   function updateQueryParam(param: string, value: string) {
     const currentUrl = new URL(window.location.href);
     currentUrl.searchParams.set(param, value);
     window.history.replaceState({}, "", currentUrl);
-    updateQueryParamInLinks(param, value);
   }
 
   document.addEventListener("DOMContentLoaded", function () {

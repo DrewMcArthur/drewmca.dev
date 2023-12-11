@@ -58,16 +58,20 @@ const scrollTotalOffset = sections[section]?.scrollTotalOffset;
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    const scrollStartOffset = document.querySelector<HTMLMetaElement>(
-      'meta[name="scrollStartOffset"]'
-    )!.content as unknown as number;
-    const scrollTotalOffset = document.querySelector<HTMLMetaElement>(
-      'meta[name="scrollTotalOffset"]'
-    )!.content as unknown as number;
+    const scrollStartOffset = Number(
+      document.querySelector<HTMLMetaElement>('meta[name="scrollStartOffset"]')!
+        .content
+    );
+    const scrollTotalOffset = Number(
+      document.querySelector<HTMLMetaElement>('meta[name="scrollTotalOffset"]')!
+        .content
+    );
+    const section = Number(
+      document.querySelector<HTMLMetaElement>('meta[name="section"]')!.content
+    );
 
     const audio = document.querySelector("audio")!;
     const transcriptDiv = document.querySelector("#transcript")!;
-    const nextButton: HTMLElement = document.querySelector(".nav-button.next")!;
 
     const scrollHeight =
       transcriptDiv.scrollHeight - transcriptDiv.clientHeight;
@@ -77,14 +81,14 @@ const scrollTotalOffset = sections[section]?.scrollTotalOffset;
       const proportionPlayed =
         (audio.currentTime - scrollStartOffset) /
         (audio.duration - scrollTotalOffset);
-      document.scrollingElement!.scrollTop = 295;
+      document.scrollingElement!.scrollTop = 235;
       transcriptDiv.scrollTop = proportionPlayed * scrollHeight;
     }
 
     audio.addEventListener("play", function () {
       updateScrollPosition(); // Initialize scroll position
 
-      interval = setInterval(updateScrollPosition, 300); // Update every 50ms for smoother scrolling
+      interval = setInterval(updateScrollPosition, 41.666666); // Update every 50ms for smoother scrolling
     });
 
     // Stop scrolling when audio is paused or ended
@@ -95,7 +99,17 @@ const scrollTotalOffset = sections[section]?.scrollTotalOffset;
     audio.addEventListener("ended", function () {
       clearInterval(interval);
 
-      if (checkAutoplay()) setTimeout(() => nextButton.click(), 3000);
+      if (checkAutoplay()) {
+        document
+          .querySelector("#autoplay-toggle")!
+          .classList.add("autoplaying");
+
+        setTimeout(() => {
+          window.location.href = `/projects/trident/sections/${
+            section + 1
+          }?autoplay=true`;
+        }, 3000);
+      }
     });
 
     audio.addEventListener("seeked", updateScrollPosition); // Update scroll when user seeks in audio
