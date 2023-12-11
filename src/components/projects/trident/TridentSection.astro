@@ -1,14 +1,8 @@
 ---
 import InvalidSectionTranscript from "./transcripts/InvalidSectionTranscript.astro";
-import Transcript0 from "./transcripts/Intro.astro";
-// import Transcript1 from "./transcripts/Transcript1.astro";
 import Tour from "./transcripts/Tour.astro";
 import { sections } from "../../../data/tridentConfig.json";
-import Transcript1 from "./transcripts/Foundation.astro";
-import Transcript2 from "./transcripts/Transition.astro";
 import Intro from "./transcripts/Intro.astro";
-import Transcript3 from "./transcripts/Ownership.astro";
-import Transcript4 from "./transcripts/Community.astro";
 import Community from "./transcripts/Community.astro";
 import Conclusion from "./transcripts/Conclusion.astro";
 import Foundation from "./transcripts/Foundation.astro";
@@ -59,6 +53,10 @@ const scrollTotalOffset = sections[section]?.scrollTotalOffset;
 </div>
 
 <script>
+  function checkAutoplay(): boolean {
+    return (document.querySelector("#autoplay")! as HTMLInputElement).checked;
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     const scrollStartOffset = document.querySelector<HTMLMetaElement>(
       'meta[name="scrollStartOffset"]'
@@ -70,9 +68,6 @@ const scrollTotalOffset = sections[section]?.scrollTotalOffset;
     const audio = document.querySelector("audio")!;
     const transcriptDiv = document.querySelector("#transcript")!;
     const nextButton: HTMLElement = document.querySelector(".nav-button.next")!;
-    const autoplay: boolean = (
-      document.querySelector("#autoplay")! as HTMLInputElement
-    ).checked;
 
     const scrollHeight =
       transcriptDiv.scrollHeight - transcriptDiv.clientHeight;
@@ -100,15 +95,19 @@ const scrollTotalOffset = sections[section]?.scrollTotalOffset;
     audio.addEventListener("ended", function () {
       clearInterval(interval);
 
-      if (autoplay) {
-        setTimeout(() => nextButton.click(), 3000);
-      }
+      if (checkAutoplay()) setTimeout(() => nextButton.click(), 3000);
     });
 
     audio.addEventListener("seeked", updateScrollPosition); // Update scroll when user seeks in audio
 
-    if (autoplay) {
-      audio.play();
-    }
+    document.addEventListener("keypress", function (event) {
+      if (event.key === " ") {
+        event.preventDefault();
+        if (audio.paused) audio.play();
+        else audio.pause();
+      }
+    });
+
+    if (checkAutoplay()) audio.play();
   });
 </script>

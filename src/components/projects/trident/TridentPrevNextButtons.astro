@@ -27,7 +27,7 @@ const nextUrl = `/projects/trident/section/${section + 1}`;
     const links = document.querySelectorAll("a");
     links.forEach((link) => {
       const url = new URL(link.href);
-      if (url.host === window.location.host) {
+      if (url.host == window.location.host) {
         url.searchParams.set(param, value);
         link.href = url.toString();
       }
@@ -44,13 +44,14 @@ const nextUrl = `/projects/trident/section/${section + 1}`;
   document.addEventListener("DOMContentLoaded", function () {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const autoplay = urlParams.get("autoplay") !== "false";
+    const autoplay = urlParams.get("autoplay") === "true";
 
     const autoplayContainer = document.querySelector("#autoplay-toggle")!;
     const autoplayCheckbox: HTMLInputElement =
       autoplayContainer.querySelector("#autoplay")!;
 
     autoplayCheckbox.checked = autoplay;
+    updateQueryParam("autoplay", `${autoplayCheckbox.checked}`);
 
     autoplayContainer.addEventListener("click", function () {
       autoplayCheckbox.checked = !autoplayCheckbox.checked;

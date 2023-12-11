@@ -15,20 +15,20 @@
         {
             "title": "Transition",
             "audioSource": "/audio/transition.mp3",
-            "scrollStartOffset": "0",
-            "scrollTotalOffset": "0"
+            "scrollStartOffset": "16",
+            "scrollTotalOffset": "72"
         },
         {
             "title": "Ownership",
             "audioSource": "/audio/ownership.mp3",
-            "scrollStartOffset": "0",
-            "scrollTotalOffset": "0"
+            "scrollStartOffset": "16",
+            "scrollTotalOffset": "72"
         },
         {
             "title": "Community",
             "audioSource": "/audio/community.mp3",
-            "scrollStartOffset": "0",
-            "scrollTotalOffset": "0"
+            "scrollStartOffset": "16",
+            "scrollTotalOffset": "72"
         },
         {
             "title": "Conclusion",
@@ -39,14 +39,14 @@
         {
             "title": "Full Interview - Peter Jones",
             "audioSource": "/audio/peter.m4a",
-            "scrollStartOffset": "0",
-            "scrollTotalOffset": "0"
+            "scrollStartOffset": "16",
+            "scrollTotalOffset": "72"
         },
         {
             "title": "Full Interview - Caroline Shaw",
             "audioSource": "/audio/caroline.m4a",
-            "scrollStartOffset": "0",
-            "scrollTotalOffset": "0"
+            "scrollStartOffset": "16",
+            "scrollTotalOffset": "72"
         },
         {
             "title": "(Bonus) Audio Tour",
