@@ -106,5 +106,9 @@ const scrollTotalOffset = sections[section]?.scrollTotalOffset;
     });
 
     audio.addEventListener("seeked", updateScrollPosition); // Update scroll when user seeks in audio
+
+    if (autoplay) {
+      audio.play();
+    }
   });
 </script>
