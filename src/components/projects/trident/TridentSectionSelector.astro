@@ -1,0 +1,31 @@
+---
+import "../../../styles/trident/section-selector.css";
+import TridentSectionLink from "./TridentSectionLink.astro";
+import { sections } from "../../../data/tridentConfig.json";
+
+const section = Astro.props.section as number;
+const currentTitle = sections[section].title;
+---
+
+<div class="dropdown">
+  <div class="dropbtn">{section}. {currentTitle}</div>
+  <div class="dropdown-content">
+    {sections.map((section, index) => <TridentSectionLink section={index} />)}
+  </div>
+</div>
+
+<script>
+  // on load
+  document.addEventListener("DOMContentLoaded", function () {
+    const selector = document.querySelector(".dropbtn")!;
+    document.addEventListener("click", function (event) {
+      if (event.target == selector) {
+        selector.classList.toggle("active");
+        document.querySelector(".dropdown-content")!.classList.toggle("show");
+      } else {
+        document.querySelector(".dropdown-content")!.classList.remove("show");
+        selector.classList.remove("active");
+      }
+    });
+  });
+</script>

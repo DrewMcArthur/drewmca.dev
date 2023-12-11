@@ -1,0 +1,127 @@
+---
+import InvalidSectionTranscript from "./transcripts/InvalidSectionTranscript.astro";
+import Tour from "./transcripts/Tour.astro";
+import { sections } from "../../../data/tridentConfig.json";
+import Intro from "./transcripts/Intro.astro";
+import Community from "./transcripts/Community.astro";
+import Conclusion from "./transcripts/Conclusion.astro";
+import Foundation from "./transcripts/Foundation.astro";
+import Ownership from "./transcripts/Ownership.astro";
+import Transition from "./transcripts/Transition.astro";
+import Caroline from "./transcripts/Caroline.astro";
+import Peter from "./transcripts/Peter.astro";
+
+const section = Astro.props.section as number;
+
+const audioSourceFile: string = sections[section]?.audioSource;
+const scrollStartOffset = sections[section]?.scrollStartOffset;
+const scrollTotalOffset = sections[section]?.scrollTotalOffset;
+---
+
+<meta name="section" content={`${section}`} />
+<meta name="scrollStartOffset" content={scrollStartOffset} />
+<meta name="scrollTotalOffset" content={scrollTotalOffset} />
+
+<audio controls id="audio-player">
+  <source id="audio-source" src={audioSourceFile} type="audio/mp3" />
+</audio>
+<h4 class="transcript-title">Transcript</h4>
+<div id="transcript">
+  {
+    section == 0 ? (
+      <Intro />
+    ) : section == 1 ? (
+      <Foundation />
+    ) : section == 2 ? (
+      <Transition />
+    ) : section == 3 ? (
+      <Ownership />
+    ) : section == 4 ? (
+      <Community />
+    ) : section == 5 ? (
+      <Conclusion />
+    ) : section == 6 ? (
+      <Peter />
+    ) : section == 7 ? (
+      <Caroline />
+    ) : section == 8 ? (
+      <Tour />
+    ) : (
+      <InvalidSectionTranscript />
+    )
+  }
+</div>
+
+<script>
+  function checkAutoplay(): boolean {
+    return (document.querySelector("#autoplay")! as HTMLInputElement).checked;
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollStartOffset = Number(
+      document.querySelector<HTMLMetaElement>('meta[name="scrollStartOffset"]')!
+        .content
+    );
+    const scrollTotalOffset = Number(
+      document.querySelector<HTMLMetaElement>('meta[name="scrollTotalOffset"]')!
+        .content
+    );
+    const section = Number(
+      document.querySelector<HTMLMetaElement>('meta[name="section"]')!.content
+    );
+
+    const audio = document.querySelector("audio")!;
+    const transcriptDiv = document.querySelector("#transcript")!;
+
+    const scrollHeight =
+      transcriptDiv.scrollHeight - transcriptDiv.clientHeight;
+    let interval: number;
+
+    function updateScrollPosition() {
+      const proportionPlayed =
+        (audio.currentTime - scrollStartOffset) /
+        (audio.duration - scrollTotalOffset);
+      document.scrollingElement!.scrollTop = 235;
+      transcriptDiv.scrollTop = proportionPlayed * scrollHeight;
+    }
+
+    audio.addEventListener("play", function () {
+      updateScrollPosition(); // Initialize scroll position
+
+      interval = setInterval(updateScrollPosition, 41.666666); // Update every 50ms for smoother scrolling
+    });
+
+    // Stop scrolling when audio is paused or ended
+    audio.addEventListener("pause", function () {
+      clearInterval(interval);
+    });
+
+    audio.addEventListener("ended", function () {
+      clearInterval(interval);
+
+      if (checkAutoplay() && section < 5) {
+        document
+          .querySelector("#autoplay-toggle")!
+          .classList.add("autoplaying");
+
+        setTimeout(() => {
+          window.location.href = `/projects/trident/sections/${
+            section + 1
+          }?autoplay=true`;
+        }, 3000);
+      }
+    });
+
+    audio.addEventListener("seeked", updateScrollPosition); // Update scroll when user seeks in audio
+
+    document.addEventListener("keypress", function (event) {
+      if (event.key === " ") {
+        event.preventDefault();
+        if (audio.paused) audio.play();
+        else audio.pause();
+      }
+    });
+
+    if (checkAutoplay()) audio.play();
+  });
+</script>

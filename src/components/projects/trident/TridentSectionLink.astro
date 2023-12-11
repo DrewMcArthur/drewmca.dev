@@ -1,0 +1,7 @@
+---
+import { sections } from "../../../data/tridentConfig.json";
+const section = Astro.props.section as number;
+const linkUrl = `/projects/trident/sections/${section}`;
+---
+
+<a href={linkUrl}>{section}. {sections[section]?.title}</a>

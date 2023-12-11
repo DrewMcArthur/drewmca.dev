@@ -1,0 +1,47 @@
+---
+import "../../../styles/main.css";
+import "../../../styles/trident/trident.css";
+
+import TridentFooter from "./TridentFooter.astro";
+import TridentPrevNextButtons from "./TridentPrevNextButtons.astro";
+import TridentSection from "./TridentSection.astro";
+import TridentSectionSelector from "./TridentSectionSelector.astro";
+
+const section = Astro.props.section as number;
+---
+
+<html>
+  <head>
+    <title>drewmca.dev</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- htmx -->
+    <script src="https://unpkg.com/htmx.org@1.9.9"></script>
+  </head>
+  <body>
+    <div class="trident-header">
+      <h1>Trident Audio Tour</h1>
+      <img
+        src="/images/trident-logo.jpeg"
+        alt="Trident Logo"
+        class="trident-logo"
+      />
+    </div>
+    <span class="date">{section > 7 ? "October 30" : "December 11"}, 2023</span>
+    <p class="lead">
+      <em>
+        Trident is an employee-owned bookstore and cafe located in Boulder,
+        Colorado. Experience an audio tour of the location below.
+      </em>
+    </p>
+
+    <TridentSectionSelector section={section} />
+    <TridentSection section={section} />
+    <TridentPrevNextButtons section={section} />
+    <TridentFooter />
+  </body>
+</html>

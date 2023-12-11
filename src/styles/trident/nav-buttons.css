@@ -1,0 +1,92 @@
+.prev-next-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-button {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    color: #555;
+    border: 1px solid #555;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    font-size: 24px;
+    justify-content: center;
+}
+
+.nav-button:hover {
+    border-color: black;
+    color: black;
+}
+
+.nav-button.hidden {
+    visibility: hidden;
+}
+
+.nav-button span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#autoplay-toggle {
+    display: flex;
+    color: #555;
+    border: 1px solid #555;
+    align-items: center;
+    padding: 5px 15px;
+}
+
+#checkbox-container {
+    display: flex;
+}
+
+#autoplay-toggle:hover,
+#autoplay-toggle.active label {
+    border-color: black;
+    color: black;
+}
+
+#autoplay-toggle>#checkbox-container {
+    border: 4px solid transparent;
+}
+
+#autoplay-toggle.autoplaying>#checkbox-container {
+    border-top-color: #555;
+    border-radius: 50%;
+    animation: rotateAnimation 1s linear infinite;
+}
+
+#autoplay-toggle.autoplaying>#checkbox-container>input {
+    visibility: hidden;
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#autoplay-toggle.autoplaying:hover>#checkbox-container {
+    /* stop button */
+    border-color: transparent;
+    border-radius: 0;
+    background-color: black;
+    animation: none;
+    transform: rotate(0deg);
+}
+
+.autoplay {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#checkbox-container {
+    margin-right: 10px;
+}

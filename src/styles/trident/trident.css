@@ -1,0 +1,67 @@
+:root {
+    --main-color: #1c2424;
+}
+
+body {
+    background-color: white;
+    max-width: 580px;
+    margin: auto;
+    overflow: auto;
+    padding: 3vh;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+audio {
+    width: 100%;
+}
+
+.trident-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.trident-header h1 {
+    align-self: end;
+    margin-left: -0.15em;
+}
+
+.trident-logo {
+    width: 100px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.date {
+    font-size: .7em;
+    font-style: italic;
+}
+
+.lead {
+    font-size: .8em;
+}
+
+#transcript {
+    font-size: .8em;
+    padding: 0 1vw;
+    border-left: 2px solid darkgray;
+    flex-shrink: 0;
+    max-height: 65vh;
+    overflow-y: scroll;
+}
+
+#transcript>p:first-child {
+    margin-top: 0;
+}
+
+.prev-next-buttons {
+    margin-top: 1.5em;
+}
+
+.footer-info>p {
+    margin-top: 1.5em;
+    font-size: .7em;
+    font-style: italic;
+}
