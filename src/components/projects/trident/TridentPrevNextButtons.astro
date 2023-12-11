@@ -1,7 +1,7 @@
 ---
 import "../../../styles/trident/nav-buttons.css";
 import { sections } from "../../../data/tridentConfig.json";
-const section = Astro.props.section as number;
+const section = Number(Astro.props.section);
 const prevUrl = `/projects/trident/sections/${section - 1}`;
 const nextUrl = `/projects/trident/sections/${section + 1}`;
 ---
@@ -10,7 +10,7 @@ const nextUrl = `/projects/trident/sections/${section + 1}`;
   <a href={prevUrl} class={`nav-button prev ${section <= 0 && "hidden"}`}>
     <span>&larr;</span>
   </a>
-  <div id="autoplay-toggle" class="autoplay">
+  <div id="autoplay-toggle" class=`autoplay ${section > 4 && "hidden"}`>
     <div id="checkbox-container" class="autoplay">
       <input type="checkbox" id="autoplay" class="autoplay" />
     </div>

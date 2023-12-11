@@ -99,7 +99,7 @@ const scrollTotalOffset = sections[section]?.scrollTotalOffset;
     audio.addEventListener("ended", function () {
       clearInterval(interval);
 
-      if (checkAutoplay()) {
+      if (checkAutoplay() && section < 5) {
         document
           .querySelector("#autoplay-toggle")!
           .classList.add("autoplaying");

@@ -10,6 +10,10 @@ body {
     padding: 3vh;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 audio {
     width: 100%;
 }
