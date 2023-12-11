@@ -38,15 +38,15 @@
         },
         {
             "title": "Full Interview - Peter Jones",
-            "audioSource": "/audio/peter.m4a",
-            "scrollStartOffset": "16",
-            "scrollTotalOffset": "72"
+            "audioSource": "/audio/peter.mp3",
+            "scrollStartOffset": "10",
+            "scrollTotalOffset": "45"
         },
         {
             "title": "Full Interview - Caroline Shaw",
-            "audioSource": "/audio/caroline.m4a",
+            "audioSource": "/audio/caroline.mp3",
             "scrollStartOffset": "16",
-            "scrollTotalOffset": "72"
+            "scrollTotalOffset": "60"
         },
         {
             "title": "(Bonus) Audio Tour",
