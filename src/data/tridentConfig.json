@@ -43,20 +43,6 @@
             "date": "December 11, 2023"
         },
         {
-            "title": "Full Interview - Peter Jones",
-            "audioSource": "/audio/peter.mp3",
-            "scrollStartOffset": "10",
-            "scrollTotalOffset": "45",
-            "date": "October 13, 2023"
-        },
-        {
-            "title": "Full Interview - Caroline Shaw",
-            "audioSource": "/audio/caroline.mp3",
-            "scrollStartOffset": "16",
-            "scrollTotalOffset": "60",
-            "date": "November 26, 2023"
-        },
-        {
             "title": "(Bonus) Audio Tour",
             "audioSource": "/audio/tour.mp3",
             "scrollStartOffset": "20",
