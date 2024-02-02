@@ -10,7 +10,7 @@ const currentTitle = sections[section].title;
 <div class="dropdown">
   <div class="dropbtn">{section}. {currentTitle}</div>
   <div class="dropdown-content">
-    {sections.map((section, index) => <TridentSectionLink section={index} />)}
+    {sections.map((_, index) => <TridentSectionLink section={index} />)}
   </div>
 </div>
 
