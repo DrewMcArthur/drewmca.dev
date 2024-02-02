@@ -1,6 +1,6 @@
 {
-    "name": "Drew McArthur | drewmca.dev",
-    "short_name": "drewmca.dev",
+    "name": "drew mca | drewmca.dev",
+    "short_name": "drew mca",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "antiquewhite",
-    "background_color": "antiquewhite",
+    "theme_color": "whitesmoke",
+    "background_color": "whitesmoke",
     "display": "minimal-ui"
 }
