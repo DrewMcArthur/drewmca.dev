@@ -1,17 +1,27 @@
 :root {
-  --background-color: antiquewhite;
-
-  --main-color: #394f4f;
-  --light-color: #6b7d7d;
-
-  --main-color--hover: #1b3333;
+  --color1: #FAF0E6;
+  --color2: #DBD3CA;
+  --color3: #807A75;
+  --color4: #4D4946;
+  --color5: #292726;
 
   /* to calculate, put the above hex into https://codepen.io/sosuke/pen/Pjoqqp */
-  --background-color-filter: invert(100%) sepia(86%) saturate(795%) hue-rotate(299deg) brightness(107%) contrast(96%);
+  --color1-filter: invert(98%) sepia(31%) saturate(480%) hue-rotate(301deg) brightness(101%) contrast(96%);
+  --color2-filter: invert(92%) sepia(25%) saturate(102%) hue-rotate(340deg) brightness(90%) contrast(90%);
+  --color3-filer: invert(55%) sepia(2%) saturate(1547%) hue-rotate(345deg) brightness(86%) contrast(74%);
+  --color4-filter: invert(26%) sepia(18%) saturate(167%) hue-rotate(344deg) brightness(94%) contrast(85%);
+  --color5-filter: invert(11%) sepia(34%) saturate(76%) hue-rotate(335deg) brightness(98%) contrast(89%);
 
-  --main-color-filter: invert(27%) sepia(15%) saturate(626%) hue-rotate(131deg) brightness(96%) contrast(91%);
+  --main-color--hover: #000;
+  --main-color-filter--hover: invert(0%) sepia(2%) saturate(9%) hue-rotate(27deg) brightness(90%) contrast(102%);
 
-  --main-color-filter--hover: invert(15%) sepia(8%) saturate(2382%) hue-rotate(131deg) brightness(93%) contrast(89%);
+  --background-color: var(--color1);
+  --main-color: var(--color5);
+  --light-color: var(--color4);
+
+  --background-color-filter: var(--color1-filter);
+  --main-color-filter: var(--color5-filter);
+  --light-color-filter: var(--color4-filter);
 
   /** animation timing **/
   --flyin-timing: cubic-bezier(0, 1, 0, 1);
@@ -141,7 +151,7 @@ a {
 
 .social-icon {
   margin: 5px;
-  filter: var(--main-color-filter);
+  filter: var(--light-color-filter);
 }
 
 .social-text {
