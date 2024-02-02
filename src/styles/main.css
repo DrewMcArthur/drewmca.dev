@@ -27,6 +27,26 @@
   --flyin-timing: cubic-bezier(0, 1, 0, 1);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-color--hover: #fff;
+    --main-color-filter--hover: invert(100%) sepia(1%) saturate(77%) hue-rotate(254deg) brightness(116%) contrast(101%);
+
+    --color1: #F0E6FA;
+    /* --color2: #D3CADB; */
+    --color1-filter: invert(88%) sepia(22%) saturate(271%) hue-rotate(212deg) brightness(102%) contrast(96%);
+    /* --color2-filter: invert(96%) sepia(6%) saturate(1733%) hue-rotate(194deg) brightness(87%) contrast(98%); */
+
+    --background-color: var(--color5);
+    --main-color: var(--color1);
+    --light-color: var(--color1);
+
+    --background-color-filter: var(--color5-filter);
+    --main-color-filter: var(--color1-filter);
+    --light-color-filter: var(--color1-filter);
+  }
+}
+
 body {
   display: flex;
   flex-direction: column;
