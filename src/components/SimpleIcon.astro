@@ -4,10 +4,8 @@ const { name } = Astro.props;
 
 <img
   class={`social-icon ${name}`}
+  alt={`${name}-icon`}
   height="32"
   width="32"
-  {/* TODO: remove condition once #8856 is merged in simple-icons */}
-  src={name === "bluesky"
-    ? "https://raw.githubusercontent.com/simple-icons/simple-icons/29300bc89dfc8e652020338ad3a399fdfb9019fd/icons/bluesky.svg"
-    : `https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/${name}.svg`}
+  src={`https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/${name}.svg`}
 />
