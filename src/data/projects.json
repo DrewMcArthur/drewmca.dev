@@ -1,0 +1,24 @@
+{
+    "projects": [
+        {
+            "link": "//allielind.com",
+            "title": "allielind.com",
+            "desc": "a website for my partner, who happens to be an incredible aerialist!"
+        },
+        {
+            "link": "/papers/inflationary-equity.pdf",
+            "title": "Inflationary Equity",
+            "desc": "a paper I wrote on the potential ramifications of lifting the cap in company stock, and automatically allocating it to employees."
+        },
+        {
+            "link": "//github.com/drewmcarthur/msgpack-bal",
+            "title": "msgpack-bal",
+            "desc": "a msgpack library written in ballerina."
+        },
+        {
+            "link": "/projects/trident",
+            "title": "Trident Audio Project",
+            "desc": "a class project on a local bookstore and cafe."
+        }
+    ]
+}

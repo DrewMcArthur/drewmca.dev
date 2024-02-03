@@ -1,0 +1,27 @@
+ul.projects {
+    padding: 0 7.5vw;
+}
+
+.projects .year {
+    font-style: italic;
+}
+
+.projects li {
+    list-style: none;
+    margin-bottom: 1em;
+}
+
+.projects li a {
+    text-decoration: none;
+}
+
+.projects li p {
+    margin: 0;
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+.projects li p:first-child {
+    text-decoration: underline;
+    margin: 0;
+}
