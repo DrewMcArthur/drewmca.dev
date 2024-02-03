@@ -15,7 +15,7 @@ jobs:
           - { "path": "src/data/links.json", "property": "linkData" }
           - { "path": "src/data/projects.json", "property": "projects" }
     outputs:
-      matrix: ${{ steps.json.outputs.value }}
+      matrix: ${{ steps.json.outputs.linkData }}
     steps:
       - uses: actions/checkout@v3
       - name: get specified property
@@ -26,7 +26,7 @@ jobs:
           prop_path: ${{matrix.dataFile.property}}
       - id: json
         run: |
-          echo "linkData=toJson(steps.load_urls.outputs.value)" >> $GITHUB_OUTPUT
+          echo "linkData=${{ toJSON(steps.load_urls.outputs.value) }}" >> $GITHUB_OUTPUT
 
   check:
     name: Check URLs
@@ -39,5 +39,5 @@ jobs:
       - name: URL Health Check
         uses: Jtalk/url-health-check-action@v3.1
         with:
-          url: ${{matrix.value}}
+          url: ${{matrix.value.url}}
           follow-redirect: true
