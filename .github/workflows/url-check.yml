@@ -23,10 +23,10 @@ jobs:
         uses: ActionsTools/read-json-action@main
         with:
           file_path: ${{matrix.dataFile.path}}
-          prop_path: ${{matrix.dataFile.property}}
+          prop_path: ${{matrix.dataFile.property}}.url
       - id: json
         run: |
-          echo "linkData=${{ steps.load_urls.outputs }}" >> $GITHUB_OUTPUT
+          echo "linkData=${{ toJSON(steps.load_urls.outputs.value) }}" >> $GITHUB_OUTPUT
 
   check:
     name: Check URLs
