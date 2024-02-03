@@ -17,7 +17,7 @@ jobs:
     outputs:
       matrix: ${{ steps.json.outputs.linkData }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: get specified property
         id: load_urls
         uses: ActionsTools/read-json-action@main
@@ -26,7 +26,7 @@ jobs:
           prop_path: ${{matrix.dataFile.property}}
       - id: json
         run: |
-          echo "linkData=${{ toJSON(steps.load_urls.outputs.value) }}" >> $GITHUB_OUTPUT
+          echo "linkData=${{ toJSON(steps.load_urls.outputs) }}" >> $GITHUB_OUTPUT
 
   check:
     name: Check URLs
