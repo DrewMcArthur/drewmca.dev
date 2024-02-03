@@ -1,3 +1,17 @@
+@media (max-width: 580px) {
+    div.header {
+        font-size: 1.7em;
+    }
+
+    ul.projects {
+        padding: 0;
+    }
+
+    ul.projects li {
+        padding: 0;
+    }
+}
+
 ul.projects {
     padding: 0 7.5vw;
 }
