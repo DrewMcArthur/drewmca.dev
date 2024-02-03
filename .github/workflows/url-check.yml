@@ -6,7 +6,7 @@ on:
     branches: ["main"]
 
 jobs:
-  get_urls:
+  load_json:
     name: Load URLs
     runs-on: ubuntu-latest
     strategy:
@@ -23,10 +23,28 @@ jobs:
         uses: ActionsTools/read-json-action@main
         with:
           file_path: ${{matrix.dataFile.path}}
-          prop_path: ${{matrix.dataFile.property}}.url
+          prop_path: ${{matrix.dataFile.property}}
+      - run: |
+          echo steps.load_urls.outputs
       - id: json
         run: |
           echo "linkData=${{ toJSON(steps.load_urls.outputs.value) }}" >> $GITHUB_OUTPUT
+
+  get_urls:
+    name: Get URLs
+    runs-on: ubuntu-latest
+    needs: [load_json]
+    strategy:
+      matrix:
+        value: ${{ fromJson(needs.load_json.outputs.matrix) }}
+    outputs:
+      matrix: ${{ steps.get_url.outputs.urls }}
+    steps:
+      - run: |
+          echo ${{ toJSON(matrix.value) }}
+      - id: get_url
+        run: |
+          echo "urls=${{ toJSON(matrix.value) }}" >> $GITHUB_OUTPUT
 
   check:
     name: Check URLs
