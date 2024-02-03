@@ -26,7 +26,7 @@ jobs:
           prop_path: ${{matrix.dataFile.property}}
       - id: json
         run: |
-          echo "linkData=${{ toJSON(steps.load_urls.outputs) }}" >> $GITHUB_OUTPUT
+          echo "linkData=${{ steps.load_urls.outputs }}" >> $GITHUB_OUTPUT
 
   check:
     name: Check URLs
