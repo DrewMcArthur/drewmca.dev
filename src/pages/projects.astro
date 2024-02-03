@@ -13,6 +13,7 @@ import { projects } from "../data/projects.json";
         <li>
           <a href={p.link}>
             <p>{p.title}</p>
+            {p.type ? <span class="type">{p.type}</span> : ""}
             <p>{p.desc}</p>
           </a>
         </li>

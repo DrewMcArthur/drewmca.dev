@@ -29,21 +29,27 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --color1: #292726;
+    --color2: #4D4946;
+    --color3: #807A75;
+    --color4: #DBD3CA;
+    --color5: #F0E6FA;
+
+    /* to calculate, put the above hex into https://codepen.io/sosuke/pen/Pjoqqp */
+    --color1-filter: invert(11%) sepia(34%) saturate(76%) hue-rotate(335deg) brightness(98%) contrast(89%);
+    --color2-filter: invert(26%) sepia(18%) saturate(167%) hue-rotate(344deg) brightness(94%) contrast(85%);
+    --color3-filer: invert(55%) sepia(2%) saturate(1547%) hue-rotate(345deg) brightness(86%) contrast(74%);
+    --color4-filter: invert(92%) sepia(25%) saturate(102%) hue-rotate(340deg) brightness(90%) contrast(90%);
+    --color5-filter: invert(88%) sepia(22%) saturate(271%) hue-rotate(212deg) brightness(102%) contrast(96%);
+
     --main-color--hover: #fff;
     --main-color-filter--hover: invert(100%) sepia(1%) saturate(77%) hue-rotate(254deg) brightness(116%) contrast(101%);
 
-    --color1: #F0E6FA;
-    /* --color2: #D3CADB; */
-    --color1-filter: invert(88%) sepia(22%) saturate(271%) hue-rotate(212deg) brightness(102%) contrast(96%);
-    /* --color2-filter: invert(96%) sepia(6%) saturate(1733%) hue-rotate(194deg) brightness(87%) contrast(98%); */
+    --main-color: var(--color5);
+    --light-color: var(--color5);
 
-    --background-color: var(--color5);
-    --main-color: var(--color1);
-    --light-color: var(--color1);
-
-    --background-color-filter: var(--color5-filter);
-    --main-color-filter: var(--color1-filter);
-    --light-color-filter: var(--color1-filter);
+    --main-color-filter: var(--color5-filter);
+    --light-color-filter: var(--color5-filter);
   }
 }
 
@@ -233,7 +239,7 @@ a {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   body {
     height: calc(83.5vh - env(safe-area-inset-bottom) - env(safe-area-inset-top));
   }
