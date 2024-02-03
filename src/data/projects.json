@@ -6,9 +6,19 @@
             "desc": "a website for my partner, who happens to be an incredible aerialist!"
         },
         {
+            "link": "//qrstats.drewmca.dev",
+            "title": "qrstats",
+            "desc": "an extremely simple webapp to track link redirects.  I mostly wanted to mess around with writing rust code deployed to cloudflare's serverless workers."
+        },
+        {
             "link": "/papers/inflationary-equity.pdf",
             "title": "Inflationary Equity",
             "desc": "a paper I wrote on the potential ramifications of lifting the cap in company stock, and automatically allocating it to employees."
+        },
+        {
+            "link": "https://www.cms.gov/priorities/key-initiatives/hospital-price-transparency",
+            "title": "Price Transparency",
+            "desc": "a set of infrastructure that scrapes the machine readable files that were mandated by legislation as of Summer 2022"
         },
         {
             "link": "//github.com/drewmcarthur/msgpack-bal",
