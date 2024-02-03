@@ -16,6 +16,11 @@
             "desc": "a paper I wrote on the potential ramifications of lifting the cap in company stock, and automatically allocating it to employees."
         },
         {
+            "link": "https://www.medicaid.gov/state-overviews/scorecard/welcome",
+            "title": "Medicaid Scorecard ETL",
+            "desc": "I built the majority of the ETL pipeline that provides data for Medicaid Scorecard website."
+        },
+        {
             "link": "https://www.cms.gov/priorities/key-initiatives/hospital-price-transparency",
             "title": "Price Transparency",
             "desc": "a set of infrastructure that scrapes the machine readable files that were mandated by legislation as of Summer 2022"
