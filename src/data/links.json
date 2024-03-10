@@ -6,14 +6,24 @@
       "url": "mailto:hi@drewmca.dev"
     },
     {
+      "type": "Signal",
+      "text": "@drewmca.19",
+      "url": "https://signal.me/#eu/_PLFesdu1cIi9Kbi7dviZ9U72qtnDhOcWfTh2EY4bvpMvyxNVQFNy6BQb55V1UT7"
+    },
+    {
+      "type": "Bluesky",
+      "text": "@drewmca.dev",
+      "url": "https://bsky.app/profile/drewmca.dev"
+    },
+    {
       "type": "GitHub",
       "text": "@drewmcarthur",
       "url": "https://github.com/drewmcarthur"
     },
     {
-      "type": "GitLab",
-      "text": "@drewmcarthur",
-      "url": "https://gitlab.com/drewmcarthur"
+      "type": "Discord",
+      "text": "@drewdiezel",
+      "url": "https://discordapp.com/users/drewdiezel"
     },
     {
       "type": "LinkedIn",
@@ -36,11 +46,6 @@
       "url": "https://www.threads.net/@drewdiezel"
     },
     {
-      "type": "Bluesky",
-      "text": "@drewmca.dev",
-      "url": "https://bsky.app/profile/drewmca.dev"
-    },
-    {
       "type": "Mastodon",
       "text": "@drewmca@social.coop",
       "url": "https://social.coop/@drewmca"
@@ -51,14 +56,16 @@
       "url": "https://twitter.com/drewdiezel"
     },
     {
-      "type": "Discord",
-      "text": "@drewdiezel",
-      "url": "https://discordapp.com/users/brew#8567"
-    },
-    {
       "type": "Telegram",
       "text": "@drewmcarthur",
       "url": "https://t.me/drewmcarthur"
+    }
+  ],
+  "unused": [
+    {
+      "type": "GitLab",
+      "text": "@drewmcarthur",
+      "url": "https://gitlab.com/drewmcarthur"
     }
   ]
 }
