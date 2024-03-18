@@ -1,5 +1,5 @@
 {
-  "linkData": [
+  "links": [
     {
       "type": "gmail",
       "text": "hi@drewmca.dev",
@@ -18,7 +18,7 @@
     {
       "type": "GitHub",
       "text": "@drewmcarthur",
-      "url": "https://github.com/drewmcarthur"
+      "url": "https://github.com/drewmcarthur/"
     },
     {
       "type": "Discord",
@@ -28,7 +28,7 @@
     {
       "type": "LinkedIn",
       "text": "@drewmcarthur",
-      "url": "https://linkedin.com/in/drewmcarthur"
+      "url": "https://www.linkedin.com/in/drewmcarthur"
     },
     {
       "type": "Facebook",

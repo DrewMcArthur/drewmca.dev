@@ -1,0 +1,40 @@
+---
+import "../styles/main.css";
+import appleTouchIcon from "../images/apple-touch-icon.png";
+import favicon16 from "../images/favicon-16x16.png";
+import favicon32 from "../images/favicon-32x32.png";
+
+type Props = {
+  title?: string,
+  desc?: string
+}
+
+let { title, desc } = Astro.props;
+if (!title || title == "") title = "drewmca.dev";
+---
+
+<html lang="en">
+  <head>
+    <title>{title}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    { desc ?  <meta name="description" content={desc} /> : "" }
+    <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon.src} />
+    <link rel="icon" type="image/png" sizes="32x32" href={favicon32.src} />
+    <link rel="icon" type="image/png" sizes="16x16" href={favicon16.src} />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta
+      name="theme-color"
+      content="#FAF0E6"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#292726"
+      media="(prefers-color-scheme: dark)"
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

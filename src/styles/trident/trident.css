@@ -1,9 +1,8 @@
 :root {
-    --main-color: #1c2424;
+    --main-color: var(--color5);
 }
 
 body {
-    background-color: white;
     max-width: 580px;
     margin: auto;
     overflow: auto;
@@ -30,6 +29,7 @@ audio {
 
 .trident-logo {
     width: 100px;
+    height: auto;
     display: flex;
     justify-content: flex-end;
 }

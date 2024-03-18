@@ -1,0 +1,43 @@
+{
+    "projects": [
+        {
+            "url": "//allielind.com",
+            "title": "allielind.com",
+            "desc": "a website for my partner, who happens to be an incredible aerialist!"
+        },
+        {
+            "url": "//qrstats.drewmca.dev",
+            "title": "qrstats",
+            "desc": "an extremely simple webapp to track link redirects.  I mostly wanted to mess around with writing rust code deployed to cloudflare's serverless workers."
+        },
+        {
+            "url": "/papers/inflationary-equity.pdf",
+            "title": "Inflationary Equity",
+            "type": "school",
+            "desc": "a paper I wrote on the potential ramifications of lifting the cap in company stock, and automatically allocating it to employees."
+        },
+        {
+            "url": "https://www.medicaid.gov/state-overviews/scorecard/welcome",
+            "title": "Medicaid Scorecard ETL",
+            "type": "work",
+            "desc": "I built the majority of the ETL pipeline that provides data for Medicaid Scorecard website."
+        },
+        {
+            "url": "https://www.cms.gov/priorities/key-initiatives/hospital-price-transparency",
+            "title": "Price Transparency",
+            "type": "work",
+            "desc": "a set of infrastructure that scrapes the machine readable files that were mandated by legislation as of Summer 2022"
+        },
+        {
+            "url": "//github.com/drewmcarthur/msgpack-bal",
+            "title": "msgpack-bal",
+            "desc": "a msgpack library written in ballerina."
+        },
+        {
+            "url": "/projects/trident",
+            "title": "Trident Audio Project",
+            "type": "school",
+            "desc": "a class project on a local bookstore and cafe."
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/projects.css";
+
+import { projects } from "../data/projects.json";
+---
+
+<Layout title="projects | drewmca.dev">
+  <div class="header"><a href="/">drewmca.dev</a>&nbsp;/ projects</div>
+  <ul class="projects scrollable">
+    {
+      projects.map((p) => (
+        <li>
+          <a href={p.url}>
+            <p>{p.title}</p>
+            {p.type ? <span class="type">{p.type}</span> : ""}
+            <p>{p.desc}</p>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>

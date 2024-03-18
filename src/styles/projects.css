@@ -1,0 +1,54 @@
+@media (max-width: 580px) {
+    div.header {
+        font-size: 1.7em;
+    }
+
+    ul.projects {
+        padding: 0;
+    }
+
+    ul.projects li {
+        padding: 0;
+    }
+}
+
+ul.projects {
+    padding: 0 7.5vw;
+}
+
+.projects .year {
+    font-style: italic;
+}
+
+.projects li {
+    list-style: none;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border-bottom: 1px solid var(--color4);
+}
+
+.projects li a {
+    text-decoration: none;
+}
+
+.projects li p {
+    margin: 0;
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+.projects li p:first-child {
+    text-decoration: underline;
+    margin: 0;
+}
+
+.projects li span.type {
+    font-size: .8em;
+    margin-left: 10px;
+    padding: 0px 10px;
+    border-radius: 75px;
+    background-color: var(--color2);
+    color: var(--color4);
+    float: right;
+    margin-top: -30px
+}
