@@ -12,7 +12,7 @@ jobs:
     outputs: 
       matrix: ${{ steps.json.outputs.value }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: get specified property
         id: load_urls
         uses: ActionsTools/read-json-action@main
