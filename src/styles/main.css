@@ -134,14 +134,12 @@ a {
 
   overflow-x: hidden;
   overflow-y: scroll;
+
+  padding: 1vh 3.75vw;
 }
 
 .section>*:last-child {
   margin-bottom: 5vh;
-}
-
-.section {
-  padding: 0 3.75vw;
 }
 
 #about>p {
