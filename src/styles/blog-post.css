@@ -1,0 +1,39 @@
+body {
+    overflow-y: auto;
+    max-width: 33em;
+}
+
+p.subtitle {
+    text-indent: 0;
+    font-style: italic;
+    margin-top: 1em;
+}
+
+p.byline,
+p.keywords {
+    font-size: .9em;
+}
+
+p.byline {
+    font-style: normal;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.75;
+    text-indent: 3em;
+    margin: 0;
+    font-weight: normal;
+}
+
+
+.footnotes,
+.references {
+    margin-left: 1em;
+}
+
+.footnotes p,
+.references p {
+    text-indent: -1em;
+    text-align: left;
+}

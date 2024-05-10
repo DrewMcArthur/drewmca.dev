@@ -1,0 +1,7 @@
+---
+const {post} = Astro.props;
+const url = `/posts/${post}`
+---
+<li class="blog-post-link">
+    <a href={url}>{post}</a>
+</li>
