@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.6.0",
-    "@astrojs/mdx": "^3.0.0",
     "astro": "^4.8.2",
     "astro-breadcrumbs": "^2.3.0",
     "simple-icons": "^11.12.0",
