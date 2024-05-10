@@ -5,14 +5,7 @@ pubDate: 2023-12-13
 description: 'Mechanics of uncapped cap tables.'
 author: 'Drew McArthur'
 tags: []
-
 ---
-
-<!-- import { Breadcrumbs } from "astro-breadcrumbs";
-
-import "astro-breadcrumbs/breadcrumbs.css";
-
-<Breadcrumbs/> -->
 
 # Inflationary Equity
 

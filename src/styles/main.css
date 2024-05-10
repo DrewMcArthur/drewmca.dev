@@ -257,3 +257,13 @@ a {
     scroll-margin-left: -1.1125vw;
   }
 }
+
+.c-breadcrumbs__crumb:not(:last-child) .c-breadcrumbs__link {
+  text-decoration: underline;
+}
+
+.c-breadcrumbs__crumb:not(:last-child)::after {
+  content: ">";
+  margin-left: 1em;
+  font-size: .8em;
+}

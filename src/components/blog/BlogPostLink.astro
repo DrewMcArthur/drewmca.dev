@@ -1,7 +1,13 @@
 ---
 const {post} = Astro.props;
-const url = `/posts/${post}`
+const url = `/blog/${post}`
+const names: Record<string, string> = {
+    "inflationary_equity": "Inflationary Equity",
+    "platforms_protocols_permissibility": "Platforms, Protocols, and Permissibility"
+}
+if (!names.hasOwnProperty(post)) throw new Error("Invalid post id: " + post);
+const name = names[post];
 ---
 <li class="blog-post-link">
-    <a href={url}>{post}</a>
+    <a href={url}>{name}</a>
 </li>
