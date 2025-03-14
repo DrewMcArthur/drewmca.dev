@@ -5,5 +5,6 @@ export default defineConfig({
   integrations: [],
   redirects: {
     "/bsky": "//bsky.app/profile/drewmca.dev",
+    "/book": "//cal.com/drewmca",
   },
 });
