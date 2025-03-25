@@ -47,6 +47,7 @@
   }
 }
 
+
 body {
   display: flex;
 
@@ -60,9 +61,11 @@ body {
   max-width: 40em;
   margin: auto;
   padding: 0 5vw;
-  height: 100vh;
-  overflow-y: hidden;
   overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 a {
@@ -124,12 +127,16 @@ a {
   overflow: hidden;
 }
 
-.sidebar {
+aside {
   width: 200px;
   padding-right: 20px;
   margin: 3vh 0;
   border-right: 1px solid var(--color3);
   transition: transform 0.3s ease;
+}
+
+header {
+  position: fixed;
 }
 
 /* Section header styles */
@@ -163,8 +170,6 @@ main.content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
-  scroll-behavior: smooth;
   padding: 0 20px;
   position: relative;
   height: 100%;
@@ -195,6 +200,7 @@ main.content {
 }
 
 section {
+  flex-shrink: 0;
   padding-top: 2vh;
   padding-bottom: 5vh;
   min-height: 95vh;
@@ -312,7 +318,7 @@ section {
   }
 
   .sidebar {
-    width: 100vw;
+    width: 94vw;
     padding: 0;
     border-right: none;
     display: flex;
@@ -321,6 +327,8 @@ section {
 
   header {
     padding: 2vh 0;
+    position: sticky;
+    border-bottom: 1px solid var(--main-color);
   }
 
   .section-headers {
@@ -331,11 +339,12 @@ section {
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
-    padding: 3em 0 0.5em;
+    padding: 4em 0 0.5em;
     z-index: 50;
     transform: translateY(-100vh);
     transition: transform, opacity 0.3s ease;
     opacity: 0;
+    border-bottom: 1px solid var(--main-color);
   }
 
   .section-headers.show {
@@ -406,7 +415,7 @@ section {
     z-index: 10;
   }
 
-  #app {
+  main.content {
     padding: 0 10px;
   }
 
