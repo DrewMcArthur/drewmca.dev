@@ -5,27 +5,10 @@ import SectionHeaders from "./SectionHeaders.astro";
 import SocialLinks from "./SocialLinks.astro";
 ---
 
-<!-- Mobile header only shown on small screens -->
-<div class="mobile-header">
+<aside class="sidebar">
   <Header />
-</div>
-
-<div class="layout-container">
-  <aside class="sidebar">
-    <!-- Desktop header shown inside sidebar on large screens -->
-    <div class="desktop-header">
-      <div class="header-title">drewmca.dev/</div>
-    </div>
-    <SectionHeaders />
-  </aside>
-  <main id="app" class="content">
-    <div class="sections-container">
-      <section id="section-wrapper-about" class="section-wrapper">
-        <About />
-      </section>
-      <section id="section-wrapper-links" class="section-wrapper last-section">
-        <SocialLinks />
-      </section>
-    </div>
-  </main>
-</div>
+</aside>
+<main id="app" class="content">
+  <About />
+  <SocialLinks />
+</main>

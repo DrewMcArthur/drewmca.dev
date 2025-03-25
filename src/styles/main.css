@@ -49,7 +49,6 @@
 
 body {
   display: flex;
-  flex-direction: column;
 
   background-color: var(--background-color);
   color: var(--main-color);
@@ -60,8 +59,8 @@ body {
 
   max-width: 50em;
   margin: auto;
-  padding: 5vh 5vw;
-  height: 90vh;
+  padding: 0 5vw;
+  height: 100vh;
   overflow-y: hidden;
   overflow-x: hidden;
 }
@@ -74,25 +73,6 @@ a {
   display: none;
 }
 
-/* Mobile header - only visible on mobile */
-.mobile-header {
-  display: none;
-  /* Hidden by default, shown on small screens */
-}
-
-/* Main header with menu button */
-.main-header {
-  width: 100vw;
-  left: 0;
-  right: 0;
-  padding: 2vh 5vw 3vh;
-  background-color: var(--background-color);
-  position: fixed;
-  top: 0;
-  z-index: 20;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
 .header-content {
   display: flex;
   flex-direction: row;
@@ -100,16 +80,11 @@ a {
   width: 100%;
 }
 
-/* Desktop header in sidebar */
-.desktop-header {
-  padding: 2vh 0 3vh;
-  margin-bottom: 1vh;
-}
-
 .header-title {
+  display: flex;
   font-size: 1.5em;
   padding: 0;
-  margin: 10px 0;
+  margin: 6px 0;
 }
 
 /* Menu button */
@@ -154,7 +129,6 @@ a {
   overflow: hidden;
 }
 
-/* Sidebar styles */
 .sidebar {
   width: 200px;
   padding: 3vh 20px 20px 0;
@@ -184,11 +158,11 @@ a {
 }
 
 /* Content area */
-#app {
+main.content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  overflow-y: hidden;
+  overflow-y: auto;
   padding: 0 20px;
   position: relative;
   height: 100%;
@@ -218,19 +192,7 @@ a {
   min-height: 95vh;
 }
 
-.last-section {
-  margin-bottom: 0;
-}
-
-.section {
-  width: 100%;
-  padding: 5vh 0 4vh;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.section>*:last-child {
+section {
   margin-bottom: 5vh;
 }
 
@@ -329,35 +291,65 @@ a {
   }
 }
 
+@keyframes flyintop {
+  from {
+    opacity: 0;
+    transform: translateY(-25em);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media screen and (max-width: 768px) {
   body {
-    height: calc(83.5vh - env(safe-area-inset-bottom) - env(safe-area-inset-top));
-    padding: 5vh 3vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    flex-direction: column;
   }
 
-  .mobile-header {
-    display: block;
+  .sidebar {
+    width: 90vw;
+    padding: 0;
+    margin: auto;
+    border-right: none;
+    display: flex;
+    flex-direction: column;
   }
 
-  .desktop-header {
+  header {
+    padding: 2vh 0;
+  }
+
+  .section-headers {
+    opacity: 0;
+    transition: height, visibility, transform, opacity 0.3s ease;
+    transform: translateY(-10vh);
+    z-index: 0;
+    visibility: collapse;
     display: none;
+    height: 0;
+    padding: 15px 30px;
+  }
+
+  .section-headers.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    height: unset;
+    display: flex;
   }
 
   .main-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    padding: 1vh 0 2vh;
     z-index: 20;
+    background-color: var(--background-color);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
     margin-left: 0;
-  }
-
-  .header-content {
-    padding: 0 10px;
-    align-items: flex-end;
   }
 
   .header-title {
@@ -366,38 +358,15 @@ a {
   }
 
   .layout-container {
-    height: calc(73.5vh - env(safe-area-inset-bottom) - env(safe-area-inset-top));
     margin-top: 60px;
   }
 
   .menu-button {
     display: flex;
-  }
-
-  .sidebar {
-    position: fixed;
-    top: 60px;
-    /* Positioned below header */
-    left: 0;
-    height: calc(100vh - 60px);
-    background-color: var(--background-color);
-    transform: translateX(-100%);
-    z-index: 9;
-    width: 70%;
-    max-width: 250px;
-    box-shadow: none;
-    padding-top: 0;
-    margin-top: 0;
-    border-top: none;
-  }
-
-  .sidebar.show {
-    transform: translateX(0);
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.05);
+    z-index: 10;
   }
 
   #app {
-    width: 100%;
     padding: 0 10px;
   }
 

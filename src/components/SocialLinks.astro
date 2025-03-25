@@ -3,9 +3,9 @@ import SocialLink from "./SocialLink.astro";
 import links from "../data/links.json";
 ---
 
-<div id="links" class="social-links section">
+<section id="links" class="social-links">
   <h2>Contact</h2>
   <div class="links-container">
     {links.linkData.map((linkData) => <SocialLink data={linkData} />)}
   </div>
-</div>
+</section>
