@@ -2,6 +2,12 @@
 import About from "./About.astro";
 import Header from "./Header.astro";
 import SocialLinks from "./SocialLinks.astro";
+
+const sections = {
+  About: <About />,
+  Contact: <SocialLinks />,
+};
+// TODO: use dictionary to pass in section headers and organize sections below
 ---
 
 <aside class="sidebar">
