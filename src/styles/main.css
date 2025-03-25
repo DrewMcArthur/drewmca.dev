@@ -182,9 +182,6 @@ main.content {
   max-width: 45em;
   height: 100%;
   overflow-y: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  scroll-padding: 20px 0 30vh;
   padding-bottom: 30vh;
 }
 
@@ -194,8 +191,6 @@ main.content {
   margin-bottom: 15vh;
   display: flex;
   flex-direction: column;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
   min-height: 95vh;
 }
 
@@ -323,6 +318,11 @@ section {
     border-right: none;
     display: flex;
     flex-direction: column;
+    position: fixed;
+    background-color: var(--background-color);
+    z-index: 100;
+    margin-top: 0;
+    padding-top: 3vh;
   }
 
   header {
@@ -433,9 +433,8 @@ section {
     margin-bottom: 10vh;
   }
 
-  .section {
-    width: 100%;
-    max-width: none;
-    padding: 2vh 0;
+  section {
+    padding-bottom: 0;
+    padding-top: 14vh;
   }
 }
