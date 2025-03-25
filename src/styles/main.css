@@ -76,7 +76,6 @@ a {
 .header-content {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
   width: 100%;
 }
 
@@ -84,21 +83,17 @@ a {
   display: flex;
   font-size: 1.5em;
   padding: 0;
-  margin: 6px 0;
 }
 
 /* Menu button */
 .menu-button {
   display: none;
-  /* Hidden by default, shown on mobile */
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
   height: 21px;
-  margin-left: 20px;
-  margin-bottom: 6px;
-  /* Adjust to align with bottom of text */
   cursor: pointer;
+  padding: .5em;
 }
 
 .menu-button span {
@@ -140,7 +135,6 @@ a {
 .section-headers {
   display: flex;
   flex-direction: column;
-  gap: 15px;
   padding-top: 15px;
 }
 
@@ -225,6 +219,7 @@ section {
   align-items: center;
   justify-content: flex-start;
   transition: color .25s;
+  overflow-x: hidden;
 }
 
 .social-link:first-child {
@@ -314,9 +309,8 @@ section {
   }
 
   .sidebar {
-    width: 90vw;
+    width: 100vw;
     padding: 0;
-    margin: auto;
     border-right: none;
     display: flex;
     flex-direction: column;
@@ -327,22 +321,29 @@ section {
   }
 
   .section-headers {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    padding: 3em 0 0.5em;
+    z-index: 50;
+    transform: translateY(-100vh);
+    transition: transform, opacity 0.3s ease;
     opacity: 0;
-    transition: height, visibility, transform, opacity 0.3s ease;
-    transform: translateY(-10vh);
-    z-index: 0;
-    visibility: collapse;
-    display: none;
-    height: 0;
-    padding: 15px 30px;
   }
 
   .section-headers.show {
     opacity: 1;
     transform: translateY(0);
-    visibility: visible;
-    height: unset;
-    display: flex;
+  }
+
+  .section-headers>a {
+    width: 100%;
+    padding: .5em 0;
+    text-align: center;
   }
 
   .main-header {
@@ -352,9 +353,47 @@ section {
     margin-left: 0;
   }
 
+  .header-content {
+    position: relative;
+    z-index: 100;
+  }
+
   .header-title {
     margin-left: 0;
     padding-left: 30px;
+    padding-top: 0.1em;
+  }
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(4px);
+    /* background: rgba(0, 0, 0, 0.3); */
+    z-index: 40;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .backdrop.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Use a pseudo-element to apply opacity to the menu background without affecting its child elements */
+  .section-headers::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background-color);
+    opacity: 0.9;
+    z-index: -1;
   }
 
   .layout-container {
