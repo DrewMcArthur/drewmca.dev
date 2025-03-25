@@ -1,28 +1,31 @@
-
 <div class="section-headers">
-    <a href="#about" class="section-header about active">About</a>
-    <a href="#links" class="section-header links">Contact</a>
+  <a href="#section-wrapper-about" class="section-header about active">About</a>
+  <a href="#section-wrapper-links" class="section-header links">Contact</a>
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const app = document.querySelector('#app')!;
-        const sections: NodeListOf<HTMLElement> = document.querySelectorAll('#app > div');
-        const navLinks = document.querySelectorAll('.section-header');
-        
-        app.addEventListener('scroll', () => {
-            const appScrollLeft = app.scrollLeft;
-            
-            sections.forEach((section, index) => {
-                const sectionLeft = section.offsetLeft;
-                const sectionWidth = section.offsetWidth;
-            
-                if (appScrollLeft >= sectionLeft - sectionWidth / 2 && appScrollLeft < sectionLeft + sectionWidth / 2) {
-                    navLinks[index].classList.add('active');
-                } else {
-                    navLinks[index].classList.remove('active');
-                }
-            });
-        });
+  document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll(".section-header");
+    
+    // Handle mobile menu closing
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        // Close sidebar on mobile
+        const sidebar = document.querySelector(".sidebar");
+        const menuButton = document.querySelector(".menu-button");
+        if (window.innerWidth <= 768) {
+          sidebar?.classList.remove("show");
+          menuButton?.classList.remove("active");
+        }
+      });
     });
+    
+    // Basic active state on click
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+      });
+    });
+  });
 </script>
