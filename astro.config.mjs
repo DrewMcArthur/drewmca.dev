@@ -4,8 +4,6 @@ import compress from "astro-compress";
 
 import purgecss from "astro-purgecss";
 
-import min from "astro-min";
-
 // https://astro.build/config
 export default defineConfig({
   compressHTML: true,
