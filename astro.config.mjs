@@ -11,13 +11,13 @@ export default defineConfig({
   compressHTML: true,
   minifyCSS: true,
   integrations: [
-    // compress(), purgecss({
-    // fontFace: true,
-    // keyframes: true,
-    // variables: true,
-    // content: ["./src/**/*.{astro,js,jsx,ts,tsx,vue,svelte}"],
-    // }),
-    min(),
+    compress(),
+    purgecss({
+      fontFace: true,
+      keyframes: true,
+      variables: true,
+      content: ["./src/**/*.{astro,js,jsx,ts,tsx,vue,svelte}"],
+    }),
   ],
   redirects: {
     "/bsky": "//bsky.app/profile/drewmca.dev",
