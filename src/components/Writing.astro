@@ -1,0 +1,14 @@
+---
+import { getCollection } from "astro:content";
+import BlogCard from "./BlogCard.astro";
+
+const writings = await getCollection("blog");
+---
+
+<section id="writing" class="writing">
+  <h2>Writings</h2>
+  <ul class="writings">
+    {writings.map((post) => <BlogCard post={post} />)}
+    <li class="blog-card">...and more coming soon!</li>
+  </ul>
+</section>
