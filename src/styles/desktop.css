@@ -1,0 +1,5 @@
+@media screen and (min-width: 768px) {
+    aside {
+        min-height: 90vh;
+    }
+}

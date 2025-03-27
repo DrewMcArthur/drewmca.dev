@@ -25,6 +25,8 @@
 
   /** animation timing **/
   --flyin-timing: cubic-bezier(0, 1, 0, 1);
+
+  --sidebar-width: 160px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -58,7 +60,7 @@ body {
   font-size: 120%;
   line-height: 1.6em;
 
-  max-width: 40em;
+  max-width: 45em;
   margin: auto;
   padding: 0 5vw;
   overflow-x: hidden;
@@ -128,7 +130,7 @@ a {
 }
 
 aside {
-  width: 200px;
+  width: var(--sidebar-width);
   padding-right: 20px;
   margin: 3vh 0;
   border-right: 1px solid var(--color3);
@@ -143,7 +145,7 @@ header {
   flex-direction: column;
   justify-content: center;
   text-align: right;
-  width: 200px;
+  width: var(--sidebar-width);
 }
 
 /* Section header styles */

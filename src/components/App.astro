@@ -1,13 +1,8 @@
 ---
-import About from "./About.astro";
 import Header from "./Header.astro";
-import SocialLinks from "./SocialLinks.astro";
 ---
 
 <aside class="sidebar">
   <Header />
 </aside>
-<main id="app" class="content">
-  <About />
-  <SocialLinks />
-</main>
+<main id="app" class="content"><slot /></main>
