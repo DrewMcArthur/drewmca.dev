@@ -1,5 +1,9 @@
 ---
-
+const isHome = Astro.url.pathname === "/";
+const sectionChar = isHome ? "#" : "/#";
+function linkTo(header: string) {
+  return `${sectionChar}${header}`;
+}
 ---
 
 <header class="main-header">
@@ -12,8 +16,9 @@
     <div class="header-title"><a href="/">drewmca.net</a></div>
   </div>
   <div class="section-headers">
-    <a href="#about" class="about active">About</a>
-    <a href="#links" class="links">Connect</a>
+    <a href={linkTo("about")} class="about active">About</a>
+    <a href={linkTo("writing")} class="writing">Writing</a>
+    <a href={linkTo("links")} class="links">Connect</a>
   </div>
   <div class="backdrop"></div>
 </header>

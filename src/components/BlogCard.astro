@@ -1,0 +1,12 @@
+---
+const { post } = Astro.props;
+const { title, description, slug } = post.data;
+import "../styles/blog/card.css";
+---
+
+<a href=`/writing/${slug}`>
+  <li class="blog-card">
+    <h3>{title}</h3>
+    <p class="description">{description}</p>
+  </li>
+</a>

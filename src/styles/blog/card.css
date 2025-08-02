@@ -1,0 +1,30 @@
+a:hover li {
+    box-shadow: -1px 0px 3px -1px var(--main-color);
+    border-radius: 3px;
+}
+
+ul.writing {
+    margin: 0;
+    padding-left: 5vw;
+}
+
+li.blog-card {
+    list-style: none;
+    border-left: 1px solid var(--main-color);
+    padding: 0.5em 1em;
+    margin-bottom: 1.5em;
+    transition: box-shadow .1s;
+    transition: border-radius .1s;
+}
+
+li.blog-card h3 {
+    margin: 0;
+}
+
+li.blog-card p.description {
+    font-size: 0.8em;
+    padding-left: 3vw;
+    margin: 0;
+    text-decoration: none;
+    font-style: italic;
+}

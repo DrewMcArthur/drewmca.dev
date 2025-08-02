@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "astro": "^5.5.4",
+    "astro": "^5.12.8",
     "astro-compress": "^2.3.6",
     "astro-purgecss": "^5.2.2",
     "purgecss": "^7.0.2",
