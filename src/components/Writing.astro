@@ -2,13 +2,13 @@
 import { getCollection } from "astro:content";
 import BlogCard from "./BlogCard.astro";
 
-const writings = await getCollection("blog");
+const posts = await getCollection("blog");
 ---
 
 <section id="writing" class="writing">
-  <h2>Writings</h2>
-  <ul class="writings">
-    {writings.map((post) => <BlogCard post={post} />)}
+  <h2>Writing</h2>
+  <ul class="writing">
+    {posts.map((post) => <BlogCard post={post} />)}
     <li class="blog-card">...and more coming soon!</li>
   </ul>
 </section>
