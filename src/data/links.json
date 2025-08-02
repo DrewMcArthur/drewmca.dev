@@ -21,6 +21,11 @@
       "url": "https://github.com/drewmcarthur"
     },
     {
+      "type": "Leaflet",
+      "text": "leaflet.drewmca.net",
+      "url": "https://leaflet.drewmca.net"
+    },
+    {
       "type": "Literal",
       "text": "@drewmca",
       "url": "https://literal.club/drewmca"
