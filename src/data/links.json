@@ -2,8 +2,8 @@
   "linkData": [
     {
       "type": "gmail",
-      "text": "hi@drewmca.dev",
-      "url": "mailto:hi@drewmca.dev"
+      "text": "hi@drewmca.net",
+      "url": "mailto:hi@drewmca.net"
     },
     {
       "type": "Signal",
@@ -12,8 +12,8 @@
     },
     {
       "type": "Bluesky",
-      "text": "@drewmca.dev",
-      "url": "https://bsky.app/profile/drewmca.dev"
+      "text": "@drewmca.net",
+      "url": "https://bsky.app/profile/drewmca.net"
     },
     {
       "type": "GitHub",
@@ -26,9 +26,9 @@
       "url": "https://leaflet.drewmca.net"
     },
     {
-      "type": "Literal",
+      "type": "Storygraph",
       "text": "@drewmca",
-      "url": "https://literal.club/drewmca"
+      "url": "https://app.thestorygraph.com/profile/drewmca"
     },
     {
       "type": "Discord",
@@ -39,8 +39,10 @@
       "type": "LinkedIn",
       "text": "@drewmcarthur",
       "url": "https://linkedin.com/in/drewmcarthur"
-    },
-    {
+    }
+  ],
+  "unused": [
+       {
       "type": "Facebook",
       "text": "@drewdiezel",
       "url": "https://www.facebook.com/drewdiezel/"
@@ -64,9 +66,7 @@
       "type": "Telegram",
       "text": "@drewmcarthur",
       "url": "https://t.me/drewmcarthur"
-    }
-  ],
-  "unused": [
+    },
     {
       "type": "Twitter",
       "text": "@drewdiezel",
