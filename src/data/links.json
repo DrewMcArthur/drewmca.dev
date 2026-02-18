@@ -16,6 +16,11 @@
       "url": "https://bsky.app/profile/drewmca.net"
     },
     {
+      "type": "LinkedIn",
+      "text": "@drewmcarthur",
+      "url": "https://linkedin.com/in/drewmcarthur"
+    },
+    {
       "type": "GitHub",
       "text": "@drewmcarthur",
       "url": "https://github.com/drewmcarthur"
@@ -29,20 +34,10 @@
       "type": "Storygraph",
       "text": "@drewmca",
       "url": "https://app.thestorygraph.com/profile/drewmca"
-    },
-    {
-      "type": "Discord",
-      "text": "@drewdiezel",
-      "url": "https://discordapp.com/users/drewdiezel"
-    },
-    {
-      "type": "LinkedIn",
-      "text": "@drewmcarthur",
-      "url": "https://linkedin.com/in/drewmcarthur"
     }
   ],
   "unused": [
-       {
+    {
       "type": "Facebook",
       "text": "@drewdiezel",
       "url": "https://www.facebook.com/drewdiezel/"
@@ -61,6 +56,11 @@
       "type": "Mastodon",
       "text": "@drewmca@social.coop",
       "url": "https://social.coop/@drewmca"
+    },
+    {
+      "type": "Discord",
+      "text": "@drewdiezel",
+      "url": "https://discordapp.com/users/drewdiezel"
     },
     {
       "type": "Telegram",
